@@ -25,7 +25,7 @@ class InformationController extends Controller
      */
     public function create()
     {
-        //
+        return view('informations.create');
     }
 
     /**

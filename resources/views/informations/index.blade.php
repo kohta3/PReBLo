@@ -8,7 +8,8 @@
     {{$information->OfficeHour}}
     {{$information->ParkingCar}}
     {{$information->ParkingBicycles}}
-
-
+    <a href="{{route('informations.show', $information)}}">Show</a>
+    <a href="{{route('informations.edit', $information)}}">edit</a> 
 @endforeach
+
 <h1>kohta</h1>
