@@ -1,3 +1,8 @@
+
+@extends('layouts.app')
+@section('content')
+
+<div>
 @foreach ($info as $information)
     {{$information->comment}}
     {{$information->tittle}}
@@ -13,3 +18,5 @@
 @endforeach
 
 <h1>kohta</h1>
+</div>
+@endsection

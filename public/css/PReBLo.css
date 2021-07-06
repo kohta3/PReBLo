@@ -1,0 +1,50 @@
+.size img {
+    width: 25%;
+    height: auto;  /* ←縦横比を維持する高さを自動計算 */
+}
+
+.BackGroundColor{
+   background-color: #343c4c; 
+}
+
+.cover-text {
+	display: table-cell;
+	vertical-align: middle;
+  text-align: center;
+}
+.cover-img {
+	height: 600px;
+	display: table;
+	width: 100%;
+	background-size: cover;
+}
+
+.card-img-overlay {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    padding: 1.25rem;
+  }
+  .card-img-overlay-button {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    padding: 1.25rem;
+  }
+
+.cover-font{
+    font-size: 70%;
+    font-weight: bold; /*装飾*/
+}
+
+.toggle-button{
+  float: right;
+}
+
+.need-font-size{
+  font-size: 50%;
+}
