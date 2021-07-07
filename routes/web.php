@@ -21,3 +21,11 @@ Route::resource('informations', 'InformationController');
 Auth::routes(['verify' => true]);
 
 Route::get('/home', 'HomeController@index')->name('home');
+
+
+
+
+//heroku upload
+if (env('APP_ENV') === 'production') {
+        URL::forceScheme('https');
+    }
