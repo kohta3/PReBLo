@@ -48,3 +48,77 @@
 .need-font-size{
   font-size: 50%;
 }
+
+.img-responsive {
+  /* display: block; */
+  height: auto;
+  max-width: 50%;
+  opacity: 0.5;
+}
+
+
+.resizeimage-img { 
+  width: 3%; 
+  height: auto;
+}
+.resizeadd-info { 
+  width: 90%; 
+  height: auto;
+}
+
+.footer-posi{
+  position: absolute;
+  bottom: -100px;
+  width: 100%;
+}
+
+
+
+/* maincontent */
+.info-content{
+  width: 80%;
+  height: 100%;
+}
+
+.info-afi{
+  width: 30%;
+  height: 100%;
+}
+
+
+
+/* maininfo@index */
+div select{
+  text-align: center;
+  width: 15%;
+  height: 3%;
+}
+
+.add-info-index{
+  width: 100%;
+}
+
+.image-responsive{
+  width: 80%;
+  height: auto;
+}
+
+.container-textarea{
+    width:80%;
+    height:10%
+}
+form div{
+  display: inline;
+  white-space: nowrap;;
+}
+
+.info-form{
+  width: 100%;
+  float: left;
+}
+
+.preview-img{
+  width: 40%;
+  height: 100%;
+  float: left;
+}

@@ -12,40 +12,41 @@
     @extends('layouts.app')
 
     @section('content')
-
-    <div class="carousel slide carousel-fade" data-pause=false data-interval=3000  data-ride="carousel" style="width:100%">
-            <ol class="carousel-indicators">
-                <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
-                <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
-                <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
-            </ol>
-            <div class="carousel-inner">
-            <div class="carousel-item active">
-                <img class="d-block w-85 img-fluid" src="{{asset('img/carucell01.jpg')}}" alt="d-block img-fluid">
-                <div class="card-img-overlay">
-                    <p class="text-white  h1">PReBLo<br>Place<br>Recomend<br>By<br>Local</p>
+    @guest
+        <div class="carousel slide carousel-fade" data-pause=false data-interval=3000  data-ride="carousel" style="width:100%">
+                <ol class="carousel-indicators">
+                    <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+                    <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+                    <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+                </ol>
+                <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img class="d-block w-85 img-fluid" src="{{asset('img/carucell01.jpg')}}" alt="d-block img-fluid">
+                    <div class="card-img-overlay">
+                        <p class="text-white  h1">PReBLo<br>Place<br>Recomend<br>By<br>Local</p>
+                    </div>
                 </div>
-            </div>
-            <div class="carousel-item">
-                <img class="d-block w-85 img-fluid" src="{{asset('img/carucell02.jpg')}}" alt="d-block img-fluid">
-                <div class="card-img-overlay">
-                    <p class="text-white  h1">ここにテキストが入ります。</p>
+                <div class="carousel-item">
+                    <img class="d-block w-85 img-fluid" src="{{asset('img/carucell02.jpg')}}" alt="d-block img-fluid">
+                    <div class="card-img-overlay ">
+                        <p class="text-white  h1">Could you tell me way to the toilet?<br class="m-5">&nbsp;&nbsp;&nbsp;&nbsp; No I can't...<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; because....<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; I'm toilet</p>
+                    </div>
                 </div>
-            </div>
-            <div class="carousel-item">
-                <img class="d-block w-85 img-fluid" src="{{asset('img/carucell03.jpg')}}" alt="d-block img-fluid">
-                <div class="card-img-overlay">
-                    <p class="text-white h1">ここにテキストが入ります。</p>
+                <div class="carousel-item">
+                    <img class="d-block w-85 img-fluid" src="{{asset('img/carucell03.jpg')}}" alt="d-block img-fluid">
+                    <div class="card-img-overlay">
+                        <p class="text-white h1">ここにテキストが入ります。</p>
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
 
-    {{-- <div class="mr-5 text-center"> --}}
-        <a href="{{ route('register') }}"><button class="btn btn-success btn-lg btn-block shadow text-white">新規登録</button></a>
-        <a href="{{ route('login') }}"><button class="btn btn-secondary btn-lg btn-block shadow text-white">ログイン</button></a>
-    {{-- </div> --}}
-
+        {{-- <div class="mr-5 text-center"> --}}
+            <a href="{{ route('register') }}"><button class="btn btn-success btn-lg btn-block shadow text-white">新規登録</button></a>
+            <a href="{{ route('login') }}"><button class="btn btn-secondary btn-lg btn-block shadow text-white">ログイン</button></a>
+        {{-- </div> --}}
+        <div class="pb-5 mb-5">{{now()}}<br> </div>
+        @endguest
     @endsection
 </body>
 </html>

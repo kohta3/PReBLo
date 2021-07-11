@@ -29,6 +29,8 @@
         <main class="py-0">
             @yield('content')
         </main>
+        @component('components.footer')
+        @endcomponent   
     </div>
 </body>
 </html>
