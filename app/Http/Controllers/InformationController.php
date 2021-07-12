@@ -29,7 +29,7 @@ class InformationController extends Controller
      */
     public function create()
     {
-        return view('informations.create');
+        return view('informations.index');
     }
 
     /**
@@ -40,7 +40,22 @@ class InformationController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $information=new Information();
+        $information->comment=$request->input('comment');
+        $information->tittle=$request->input('tittle');
+        $information->pref=$request->input('pref');
+        $information->city=$request->input('city');
+        $information->URL=$request->input('URL');
+        $information->TEL=$request->input('TEL');
+        $information->about=$request->input('about');
+        $information->open=$request->input('open');
+        $information->close=$request->input('close');
+        $information->ParkingCar=$request->input('ParkingCar');
+        $information->ParkingBicycles=$request->input("ParkingBicycles");
+        $information->category_id = $request->input('category_id');
+        $information->save();
+
+        return redirect()->route('informations.show', ['id' => $information->id]);
     }
 
     /**
@@ -51,7 +66,7 @@ class InformationController extends Controller
      */
     public function show(Information $information)
     {
-        //
+        return view('informations.show', compact('information'));
     }
 
     /**

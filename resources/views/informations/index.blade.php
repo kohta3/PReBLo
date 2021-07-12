@@ -2,12 +2,7 @@
 @extends('layouts.app')
 @section('content')
 
-<script>
-$('#myImage').on('change', function (e) {
-  var reader = new FileReader();
-  reader.onload = function (e) {
-      $("#preview").attr('src', e.target.result);
-  }reader.readAsDataURL(e.target.files[0]);});</script>
+
 
 <p class="pt-3 pr-5 pl-5 ">
   <a class="btn btn-primary btn-sm" data-toggle="collapse" href="#multiCollapseExample1" role="button" aria-expanded="false" aria-controls="multiCollapseExample1"><img src="/img/menu.png" alt="create" class="resizeimage-img" >新しく投稿する</a>
@@ -16,29 +11,51 @@ $('#myImage').on('change', function (e) {
   <div class="col" style="width: 100%" >
     <div class="collapse multi-collapse" id="multiCollapseExample1">
       <div class="card card-body h5">
-        <form class="info-form">  
+        <form class="info-form" method="POST" action="/informations">  
+          {{ csrf_field() }}
+            {{-- choese CatrgoryType --}}
+            <label class=" bg-info rounded-pill" for="type">カテゴリータイプ</label>
+            <select name="category_id" id="type">
+              @foreach ($categories as $category)
+                  <option value="{{ $category->id }}">{{ $category->maintype.$category->category }}</option>
+              @endforeach
+            </select>
             {{-- comment --}}
             <div class="mr-1" style="width: 100%">
-              <label class=" bg-info rounded-pill" for="comment" maxlength='100'>ひとこと</label><input type="string" style="width: 80%" name="comment" id="comment">
+              <label class=" bg-info rounded-pill" for="comment" maxlength='100'>ひとこと</label>
+              <input type="string" style="width: 80%" name="comment" id="comment">
             </div>
-              {{-- tittle --}}
+            {{-- tittle --}}
             <div class="mr-1">
-              <label for="tittle" class=" bg-info rounded-pill">場所名</label><input type="string" style="width: 38%" name="comment" id="tittle">
+              <label for="tittle" class=" bg-info rounded-pill">場所名</label><input type="string" style="width: 38%" name="tittle" id="tittle">
             </div>
             {{-- pref --}}
-            <div> 
-              <label class="bg-info rounded-pill">都道府県</label>
-                <select name="pref"  style="width: 17%">
-                  @foreach ($prefs as $pref)
-                    <option value="{{$pref->Pref}}">{{$pref->Pref}}</option>
-                  @endforeach
-                </select>
-              </div>
-            {{-- city --}}
             <div>
-              <label class="ml-3 bg-info rounded-pill">市区町村</label><input type="string" name="town" class="ml-1" style="width: 25%">
+              <div> 
+                <label class="bg-info rounded-pill">都道府県</label>
+                  <select name="pref"  style="width: 100px">
+                    @foreach ($prefs as $pref)
+                      <option value="{{$pref->Pref}}">{{$pref->Pref}}</option>
+                    @endforeach
+                  </select>
+                </div>
+            {{-- city --}}
+              <div>
+                <label for="city" class="ml-3 bg-info rounded-pill">市区町村</label>
+                <input type="string" id="city" name="city" class="ml-1" style="width: 100px">
+              </div>
             </div>
-              {{-- parkingCar --}}
+            {{-- URL --}}
+            <div>
+              <label class="ml-3 bg-info rounded-pill" for="URL">URL</label>
+              <input type="url" name="URL" id="URL" style="width: 300px">
+            </div>
+            {{-- TEL --}}
+            <div>
+              <label class="ml-3 bg-info rounded-pill" for="TEL">TEL</label>
+              <input type="tel" pattern="[0-9]{3}[0-9]{4}[0-9]{4}" placeholder="090-1234-5678" name="TEL" id="TEL" style="width: 300px">
+            </div>
+            {{-- parkingCar --}}
             <div>
               <label for="carport" class='bg-info rounded-pill'>駐車場</label>
               無<input type="radio" id="carport" name="ParkingCar" value="0">
@@ -47,11 +64,21 @@ $('#myImage').on('change', function (e) {
               無<input type="radio" id="bycyclePort" name="ParkingBicycles" value="0">
               有<input type="radio" id="bycyclePort" name="ParkingBicycles" value="1">
             </div>
+            {{-- open --}}
+            <div class='border border-info p-1 align-top'>
+              <label class='bg-info rounded-pill'>営業時間</label>
+              <label for="open">open</label>
+              <input type="time" name="open" id="open">
+            {{-- closes --}}
+              <label for="close">close</label>
+              <input type="time" name="close" id="close">
+            </div>
             {{-- about --}}
             <div>
               <label for="about" class="bg-info rounded-pill align-top">about</label>
               <textarea name="about" class="ml-1 container-textarea" id="about"></textarea>
             </div>
+            
             {{-- photo --}}
             <div >
               <input type="file" id="myImage" accept="image/*">
@@ -59,12 +86,21 @@ $('#myImage').on('change', function (e) {
             {{--button--}}  
             <p>
               <div>
-                <button class="btn bg-warning border border-dark rounded-pill" type="submit"><a href="{{route('informations.create')}}">New</a></button>
+                <button class="btn bg-warning border border-dark rounded-pill" type="submit">投稿</button>
               </div>
             </p>
         </form>
+        
         <div class='preview-img bg-dark'>
-          <img  id="preview">
+          <img  id="preview" style="height: 100px">
+          <script>
+            $('#myImage').on('change', function (e) {
+              var reader = new FileReader();
+              reader.onload = function (e) {
+                  $("#preview").attr('src', e.target.result);
+            }reader.readAsDataURL(e.target.files[0]);});
+          </script>
+
         </div> 
       </div>
       

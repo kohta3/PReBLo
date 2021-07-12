@@ -18,10 +18,12 @@ class CreateInformationTable extends Migration
             $table->string('comment');
             $table->string('tittle');
             $table->string('pref');
-            $table->string('URL');
-            $table->integer('TEL')->unsigned();
+            $table->string('city');
+            $table->text('URL');
+            $table->unsignedBigInteger('TEL')->unsigned();
             $table->text('about');
-            $table->time('OfficeHour');
+            $table->time('open');
+            $table->time('close');
             $table->boolean('ParkingCar');
             $table->boolean('ParkingBicycles');
             $table->integer('category_id')->unsigned();
