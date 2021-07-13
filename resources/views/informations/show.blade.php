@@ -14,6 +14,13 @@
     {{$information->ParkingCar}}
     {{$information->ParkingBicycles}}
 </div>
+<div>
+    @if($information->is_liked_by_auth_user())
+      <a href="{{ route('infounlike', ['id' => $information->id]) }}" class="btn btn-success btn-sm">いいね<span class="badge">{{ $information->likes->count() }}</span></a>
+    @else
+      <a href="{{ route('infolike', ['id' => $information->id]) }}" class="btn btn-info btn-sm">いいね<span class="badge">{{ $information->likes->count() }}</span></a>
+    @endif
+  </div>
 
 <a href="/informations">back</a>
 
