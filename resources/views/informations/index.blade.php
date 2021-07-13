@@ -1,4 +1,3 @@
-
 @extends('layouts.app')
 @section('content')
 
@@ -93,7 +92,7 @@
         
         <div class='preview-img bg-dark'>
           <img  id="preview" style="height: 100px">
-          <script>
+          <script type="text/javascript">
             $('#myImage').on('change', function (e) {
               var reader = new FileReader();
               reader.onload = function (e) {
@@ -111,30 +110,53 @@
 
 <div style="display: flex">
   {{-- content new add & top3 --}}
+  {{-- new take6 --}}
   <div class="info-content">
-    <div>
-      <p class="text-light" style="font-size:150%;"><img src="/img/tourch.png" class="rounded-circle bg-light m-4" alt="newinfo" style="width: 5%">新規投稿一覧</p>
-    @foreach ($info as $information)
-        {{$information->comment}}
-        {{$information->tittle}}
-        {{$information->pref}}
-        {{$information->URL}}
-        {{$information->TEL}}
-        {{$information->about}}
-        {{$information->OfficeHour}}
-        {{$information->ParkingCar}}
-        {{$information->ParkingBicycles}}
-        <a href="{{route('informations.show', $information)}}">Show</a>
-        <a href="{{route('informations.edit', $information)}}">edit</a> 
-    @endforeach
+    <div class="container">
+      <div class="row">
+        <p class="text-light col-12" style="font-size:150%;"><img src="/img/tourch.png" class="rounded-circle bg-light m-4" alt="newinfo" style="width: 5%">新規投稿一覧</p>
+        @foreach ($info as $information)
+          <?php
+            if($information->ParkingCar===0)$judgeCar='駐車場有り';
+          else$judgeCar='駐車場無し';
+            if($information->ParkingBicycles===0)$judgeBycycle='駐輪場有り';
+          else$judgeBycycle='駐輪場無し';
+          ?>
+        <p class="col-md-4 text-left mb-3 text-light"> 
+          {{$information->pref.'>'.$information->city}}<br>
+          {{$information->tittle}}<br>
+          {{$information->comment}}<br>
+          {{'open'.$information->open}}<br>
+          {{'close'.$information->close}}<br>
+          {{$judgeCar."\t".$judgeBycycle}}<br>
+          <a href="{{route('informations.show', $information)}}">Show</a>
+          <a href="{{route('informations.edit', $information)}}">edit</a>
+        </p>
+        @endforeach
     </div>
 
-
-    <div>
-      <p class="text-light" style="font-size:150%;"><img src="/img/rank.png" class="rounded-circle bg-light m-4" alt="newinfo" style="width: 5%">人気ランキング</p>
+  {{-- top3 --}}
+    <div class="row">
+      <p class="text-light col-12" style="font-size:150%;"><img src="/img/rank.png" class="rounded-circle bg-light m-4" alt="newinfo" style="width: 5%">人気ランキング</p>
+      <?php $i=0;?>
+      @foreach ($topinfo as $topinfor)
+      <?php $i=$i+1;?>
+      <div class='col-md-12 h3 text-light mb-3'>  
+        {{$i.'位'}}
+        {{$topinfor->pref.'>'.$topinfor->city}}
+        {{$topinfor->tittle}}
+        {{$topinfor->comment}}
+      </div>
+      @endforeach   
 
     </div>
   </div> 
+</div>
+    
+
+
+
+    
 
   <div class="info-afi">
     {{-- rakuten afiriate --}}

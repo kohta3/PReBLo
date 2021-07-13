@@ -16,10 +16,12 @@ class InformationController extends Controller
      */
     public function index()
     {
-        $info=Information::all()->sortBy('crated_at');
+        $info=Information::all()->sortBy('crated_at')->take(6);
+        $topinfo=Information::all()->sortBy('id')->take(3);
         $prefs=Prefecture::all();
         $categories=Category::all();
-        return view('informations.index',compact('info','prefs','categories'));
+
+        return view('informations.index',compact('info','prefs','categories','topinfo'));
     }
 
     /**
@@ -55,7 +57,7 @@ class InformationController extends Controller
         $information->category_id = $request->input('category_id');
         $information->save();
 
-        return redirect()->route('informations.show', ['id' => $information->id]);
+        return redirect()->route('informations.show', ['information' => $information->id]);
     }
 
     /**
