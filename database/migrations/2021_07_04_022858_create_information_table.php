@@ -24,6 +24,7 @@ class CreateInformationTable extends Migration
             $table->text('about');
             $table->time('open');
             $table->time('close');
+            $table->string('image')->default('');
             $table->boolean('ParkingCar');
             $table->boolean('ParkingBicycles');
             $table->integer('category_id')->unsigned();

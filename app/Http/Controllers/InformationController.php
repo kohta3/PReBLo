@@ -9,6 +9,7 @@ use App\Like;
 use App\User;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Storage;
 
 class InformationController extends Controller
 {
@@ -58,6 +59,14 @@ class InformationController extends Controller
         $information->ParkingCar=$request->input('ParkingCar');
         $information->ParkingBicycles=$request->input("ParkingBicycles");
         $information->category_id = $request->input('category_id');
+        
+        if ($request->file('image') !== null) {
+            $image = $request->file('image')->store('public');
+            $information->image = basename($image);
+        } else {
+            $information->image = '';
+        }
+
         $information->save();
 
         return redirect()->route('informations.show', ['information' => $information->id]);

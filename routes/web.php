@@ -16,12 +16,12 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
     return view('firstcontact');
-});
+})->middleware('guest');
 
-Route::resource('informations', 'InformationController');
+Route::resource('informations', 'InformationController')->middleware('auth');
 Auth::routes(['verify' => true]);
 
-Route::get('/home', 'HomeController@index')->name('home');
+Route::get('/home', 'HomeController@index')->middleware('auth')->name('home');
 
 
 
@@ -31,5 +31,5 @@ if (env('APP_ENV') === 'production') {
         URL::forceScheme('https');
     }
 
-Route::get('/informations/like/{id}', 'InformationController@like')->name('infolike');
-Route::get('/informations/unlike/{id}', 'InformationController@unlike')->name('infounlike');
+Route::get('/informations/like/{id}', 'InformationController@like')->middleware('auth')->name('infolike');
+Route::get('/informations/unlike/{id}', 'InformationController@unlike')->middleware('auth')->name('infounlike');
