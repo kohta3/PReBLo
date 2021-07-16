@@ -10,6 +10,7 @@
       <div class="card card-body h5">
         <form class="info-form" method="POST" action="/informations" enctype="multipart/form-data">  
           {{ csrf_field() }}
+          @csrf
             {{-- choese CatrgoryType --}}
             <label class=" bg-info rounded-pill" for="type">カテゴリータイプ</label>
             <select name="category_id" id="type">
