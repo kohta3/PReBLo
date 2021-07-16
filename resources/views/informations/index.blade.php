@@ -127,7 +127,7 @@
               @if ($information->image !== "")
                 <img src="{{ mix('storage/'.$information->image) }}" class="info-image ">
               @else
-                <img src="{{ mix('img/dummy.png')}}" class="img-thumbnail">
+                <img src="{{ asset('img/dummy.png')}}" class="img-thumbnail">
               @endif
             </a>
           {{-- <a href="{{route('informations.edit', $information)}}">edit</a>  --}}
