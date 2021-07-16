@@ -151,7 +151,7 @@
         @if ($topinfor->image !== "")
             <img src="{{ mix('storage/'.$topinfor->image) }}" class="info-image">
             @else
-            <img src="{{ mix('img/dummy.png')}}" class="img-thumbnail">
+            <img src="{{ asset('img/dummy.png')}}" class="img-thumbnail">
         @endif
       </a>
       <div class='text-light d-flex align-items-center col-md-8 h4' >  
