@@ -61,8 +61,10 @@ class InformationController extends Controller
         $information->category_id = $request->input('category_id');
         
         if ($request->file('image') !== null) {
-            $image = $request->file('image')->store('public');
-            $information->image = basename($image);
+            $image = $request->file('image');
+            $path=Storage::disk('s3')->putFile('starage/', $image,'public');
+            $information->image =$path;
+            // $image = $request->file('image')->store('public');
         } else {
             $information->image = '';
         }
