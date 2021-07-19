@@ -150,7 +150,7 @@
     <div class="row mb-3 border border-primary Regular shadow" style="height: 12rem">
       <a href="{{route('informations.show', $information)}}" class="col-md-4  d-flex align-items-center text-center">    
         @if ($topinfor->image !== "")
-            <img src="{{ asset('storage/'.$topinfor->image) }}" class="info-image">
+            <img src="{{$information->image}}" class="info-image">
             @else
             <img src="{{ asset('img/dummy.png')}}" class="img-thumbnail">
         @endif
