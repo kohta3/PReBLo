@@ -193,7 +193,7 @@
       <img src="https://hbb.afl.rakuten.co.jp/hsb/20bca630.fcc5488e.20bca631.12bbb9d1/?me_id=2100001&me_adv_id=1421799&t=pict" border="0" class='image-responsive' style="width:50%" alt="" title=""></a>
     
     {{-- rakutenCard --}}
-
+      ganba
 
   </div>
 </div>
