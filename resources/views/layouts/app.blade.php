@@ -18,7 +18,7 @@
 
     <!-- Styles -->
     <link href="{{ mix('css/app.css') }}" rel="stylesheet">
-    <link href="{{ mix('css/PReBLo.css') }}" rel="stylesheet">
+    <link href="{{ asset('css/PReBLo.css') }}" rel="stylesheet">
 </head>
 <body class="BackGroundColor">
     <div id="app">
