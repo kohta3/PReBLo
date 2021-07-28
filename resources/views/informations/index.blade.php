@@ -183,7 +183,7 @@
 </div>    
 
 
-<div class="info-afi">
+<div class="info-afi d-none d-sm-block">
   {{-- rakuten afiriate --}}
   <div class="mb-5  mt-5 responsive-afi text-center">
     <a href="https://hb.afl.rakuten.co.jp/hsc/20bca630.fcc5488e.20bca631.12bbb9d1/?link_type=pict&ut=eyJwYWdlIjoic2hvcCIsInR5cGUiOiJwaWN0IiwiY29sIjoxLCJjYXQiOiIxMjAiLCJiYW4iOiIxNDIxNzk5IiwiYW1wIjpmYWxzZX0%3D" target="_blank" rel="nofollow sponsored noopener" class='m-5' style="word-wrap:break-word;">
