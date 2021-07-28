@@ -58,6 +58,7 @@
             <label for="carport" class='bg-info rounded-pill'>駐車場</label>
             無<input type="radio" id="carport" name="ParkingCar" value="0">
             有<input type="radio" id="carport" class="mr-2" name="ParkingCar" value="1">
+            <img src="/img/bike.png" class="bikeorcar-img">
             <label for="bycyclePort" class='bg-info rounded-pill'>駐輪場</label>
             無<input type="radio" id="bycyclePort" name="ParkingBicycles" value="0">
             有<input type="radio" id="bycyclePort" name="ParkingBicycles" value="1">
@@ -67,10 +68,10 @@
           <div class='p-1 align-top'>
             <label class='bg-info rounded-pill'>営業時間</label>
             <label for="open">open</label>
-            <input type="time" name="open" id="open" required>
+            <input type="time" name="open" id="open" class='w-10' required>
           {{-- closes --}}
             <label for="close">close</label>
-            <input type="time" name="close" id="close" required>
+            <input type="time" name="close" id="close" class='w-10' required>
           </div>
 
           {{-- about --}}
