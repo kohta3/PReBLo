@@ -19,7 +19,7 @@
           </select>
           {{-- comment --}}
           <div class="mr-1" style="width: 70%">
-            <label class=" bg-info rounded-pill" for="comment" maxlength='100'>ひとこと</label>
+            <label class=" bg-info rounded-pill" for="comment" style="width: auto" maxlength='100'>ひとこと</label>
             <input type="string" style="width: 80%" name="comment" id="comment" maxlength='50' required>
           </div>
           {{-- tittle --}}
