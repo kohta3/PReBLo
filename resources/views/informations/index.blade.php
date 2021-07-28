@@ -61,8 +61,9 @@
             無<input type="radio" id="bycyclePort" name="ParkingBicycles" value="0">
             有<input type="radio" id="bycyclePort" name="ParkingBicycles" value="1">
           </div>
+          
           {{-- open --}}
-          <div class='border border-info p-1 align-top'>
+          <div class='p-1 align-top'>
             <label class='bg-info rounded-pill'>営業時間</label>
             <label for="open">open</label>
             <input type="time" name="open" id="open" required>
@@ -70,6 +71,7 @@
             <label for="close">close</label>
             <input type="time" name="close" id="close" required>
           </div>
+
           {{-- about --}}
           <div style="width: 80%">
             <label for="about" class="bg-info rounded-pill align-top">about</label>
