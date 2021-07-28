@@ -19,8 +19,8 @@
           </select>
           {{-- comment --}}
           <div class="mr-1" style="width: 70%">
-            <label class=" bg-info rounded-pill" for="comment" style="width: auto" maxlength='100'>ひとこと</label>
-            <input type="string" style="width: 80%" name="comment" id="comment" maxlength='50' required>
+            <label class=" bg-info rounded-pill" for="comment" maxlength='100'>ひとこと</label>
+            <input type="string" style="width: 70%" name="comment" id="comment" maxlength='50' required>
           </div>
           {{-- tittle --}}
           <div class="mr-1">
@@ -38,6 +38,7 @@
               </div>
           {{-- city --}}
             <div>
+              <img src="/img/city.png" class="bikeorcar-img">
               <label for="city" class="ml-3 bg-info rounded-pill">市区町村</label>
               <input type="string" id="city" name="city" class="ml-1" style="width: 100px" required>
             </div>
