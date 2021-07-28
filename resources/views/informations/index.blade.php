@@ -156,7 +156,7 @@
                 </div>
 
                 <div class="col-md-8">
-                    <a class="mt-3 h1" href="{{route('informations.show', $information)}}">{{$topinfor->tittle}}</a>
+                    <p><a class="mt-3 h1" href="{{route('informations.show', $information)}}">{{$topinfor->tittle}}</a></p>
                     <a class="h6" href="{{$topinfor->URL}}">サイトを開く</a>
                     <p class="h5 mt-3 shadow-lg">{{'ひとこと:'.$topinfor->comment}}</p>
 
