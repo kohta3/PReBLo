@@ -68,10 +68,10 @@
           <div class='p-1 align-top'>
             <label class='bg-info rounded-pill'>営業時間</label>
             <label for="open">open</label>
-            <input type="time" name="open" id="open" style="width: 10px" required>
+            <input type="time" name="open" id="open" style="width: 75px" required>
           {{-- closes --}}
             <label for="close">close</label>
-            <input type="time" name="close" id="close" style="width: 10px" required>
+            <input type="time" name="close" id="close" style="width: 75px" required>
           </div>
 
           {{-- about --}}
