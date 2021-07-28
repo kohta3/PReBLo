@@ -18,13 +18,13 @@
             @endforeach
           </select>
           {{-- comment --}}
-          <div class="mr-1" style="width: 80%">
+          <div class="mr-1" style="width: 70%">
             <label class=" bg-info rounded-pill" for="comment" maxlength='100'>ひとこと</label>
-            <input type="string" style="width: 80%" name="comment" id="comment" required>
+            <input type="string" style="width: 80%" name="comment" id="comment" maxlength='50' required>
           </div>
           {{-- tittle --}}
           <div class="mr-1">
-            <label for="tittle" class=" bg-info rounded-pill">場所名</label><input type="string" style="width: 38%" name="tittle" id="tittle" required>
+            <label for="tittle" class=" bg-info rounded-pill">場所名</label><input type="string" style="width: 40%" name="tittle" id="tittle" required>
           </div>
           {{-- pref --}}
           <div>
