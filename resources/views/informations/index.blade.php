@@ -84,8 +84,10 @@
           {{-- photo --}}
           <div class="form-inline mt-4 mb-4 row">
               <label for="product-image" class="bg-info rounded-pill">画像</label>
-              <input type="file" name="image" id="product-image" >
+              <input type="file" name="image" id="add-file"  accept="image/*">
           </div>
+
+
           {{--button--}}  
           <p>
             <div>
