@@ -142,6 +142,10 @@ form div{
     height: auto;
   }
 
+  .wrap-add{
+    flex-wrap: wrap;
+  }
+
   .position-block{
     display: block;
     width: 90%;

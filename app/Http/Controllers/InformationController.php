@@ -72,7 +72,7 @@ class InformationController extends Controller
 
         $information->save();
 
-        return redirect()->route('informations.show', ['information' => $information->id]);
+        return redirect()->route('informations.show', ['information' => $information->id])->with('flash_message', '投稿が完了しました');;
     }
 
     /**

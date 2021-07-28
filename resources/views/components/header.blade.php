@@ -1,5 +1,5 @@
 <nav class="navbar navbar-expand-md navbar-light shadow-sm size BackGroundColor border-bottom "  >
-    <a class="navbar-brand" href="{{ url('/home') }}">
+    <a class="navbar-brand" href="{{ url('/informations') }}">
         <img src="{{asset('img/logo.png')}}" class="img-fluid" alt="Responsive image">
     </a>
 

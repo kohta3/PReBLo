@@ -30,12 +30,12 @@
           <div>
             <div> 
               <label class="bg-info rounded-pill">都道府県</label>
-                <select name="pref"  style="width: 100px">
-                  @foreach ($prefs as $pref)
-                    <option value="{{$pref->Pref}}">{{$pref->Pref}}</option>
-                  @endforeach
-                </select>
-              </div>
+              <select name="pref"  style="width: 100px">
+                @foreach ($prefs as $pref)
+                  <option value="{{$pref->Pref}}">{{$pref->Pref}}</option>
+                @endforeach
+              </select>
+            </div>
           {{-- city --}}
             <div>
               <img src="/img/city.png" class="bikeorcar-img">
@@ -98,8 +98,6 @@
 
   </div>
 </div>
-
-<div class='h-auto' style="display: flex">
 
   {{-- content new add & top3 --}}
   {{-- new take6 --}}
