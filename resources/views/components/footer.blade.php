@@ -1,4 +1,4 @@
-<div class="footer-posi">
+<footer class="footer-posi">
     <nav class="navbar navbar-expand-md navbar-light bg-info shadow-sm text-center border-top">
         @auth
         <a class="navbar-brand mx-auto"   href="{{ url('/') }}">
@@ -11,4 +11,4 @@
         </a>
         @endguest
     </nav>
-</div>
+</footer>
