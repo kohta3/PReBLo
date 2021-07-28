@@ -167,8 +167,8 @@
                       else$judgeBycycle='駐輪場無し';
                     ?>
                   <span class="text-nowrap h5 mt-3"> 
-                    <img src="/img/carport.png" class="bikeORcarport">{{$judgeCar}}
-                    <img src="/img/bike.png" class="bikeORcarport">{{$judgeBycycle}}
+                    <img src="/img/carport.png" class="bikeORcarport d-none d-lg-block">{{$judgeCar}}
+                    <img src="/img/bike.png" class="bikeORcarport d-none d-lg-block">{{$judgeBycycle}}
                   </span>
                 </div>
               </div>
