@@ -105,7 +105,7 @@
         @foreach ($info as $information)         
           <p class="col-md-4 text-left text-light  border" style="height: 300px"> 
               {{$information->pref.'>'.$information->city}}<br>
-              <a  class='h1' href="{{route('informations.show', $information)}}">{{$information->tittle}}</a><br>
+              <a  class='h3' href="{{route('informations.show', $information)}}">{{$information->tittle}}</a><br>
               {{'ひとこと:'.$information->comment}}<br>
             <br>
             <a class="text-center d-block mx-auto" href="{{route('informations.show', $information)}}">

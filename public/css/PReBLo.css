@@ -142,10 +142,11 @@ form div{
     height: auto;
   }
 
- .position-block{
+  .position-block{
     display: block;
+    width: 90%;
+    margin-right: auto;
     margin-left: auto;
-    margin-right: auto 
  }
 }
 /* pc　768px以上 */
