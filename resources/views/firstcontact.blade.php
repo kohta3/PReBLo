@@ -48,8 +48,8 @@
         
         <div class="d-block d-sm-none text-center">
             <div class="text-nowrap">    
-                <a href="https://hb.afl.rakuten.co.jp/hsc/20f0bc93.bef324e5.20bca631.12bbb9d1/?link_type=pict&ut=eyJwYWdlIjoic2hvcCIsInR5cGUiOiJwaWN0IiwiY29sIjoxLCJjYXQiOiIxMjEiLCJiYW4iOiIxNDIxNzk4IiwiYW1wIjpmYWxzZX0%3D" target="_blank" rel="nofollow sponsored noopener" style="word-wrap:break-word;"  >
-                    <img src="https://hbb.afl.rakuten.co.jp/hsb/20f0bc93.bef324e5.20bca631.12bbb9d1/?me_id=2100001&me_adv_id=1421798&t=pict" border="0" style="margin:2px" alt="" title="">
+                <a href="https://hb.afl.rakuten.co.jp/hsc/20f0bc7a.ac2b5ccd.20bca631.12bbb9d1/?link_type=pict&ut=eyJwYWdlIjoic2hvcCIsInR5cGUiOiJwaWN0IiwiY29sIjoxLCJjYXQiOiIxMjEiLCJiYW4iOiI1MjEyOTMiLCJhbXAiOmZhbHNlfQ%3D%3D" target="_blank" rel="nofollow sponsored noopener" style="word-wrap:break-word;"  >
+                    <img src="https://hbb.afl.rakuten.co.jp/hsb/20f0bc7a.ac2b5ccd.20bca631.12bbb9d1/?me_id=2100001&me_adv_id=521293&t=pict" border="0" style="margin:2px" alt="" title="">
                 </a>
                 <a href="https://hb.afl.rakuten.co.jp/hsc/20f0b300.3c0da10e.20bca631.12bbb9d1/?link_type=pict&ut=eyJwYWdlIjoic2hvcCIsInR5cGUiOiJwaWN0IiwiY29sIjoxLCJjYXQiOiIxIiwiYmFuIjoiMTY3NDAxIiwiYW1wIjpmYWxzZX0%3D" target="_blank" rel="nofollow sponsored noopener" style="word-wrap:break-word;"  >
                     <img src="https://hbb.afl.rakuten.co.jp/hsb/20f0b300.3c0da10e.20bca631.12bbb9d1/?me_id=2101008&me_adv_id=167401&t=pict" border="0" style="margin:2px" alt="" title="">
