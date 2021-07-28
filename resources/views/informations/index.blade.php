@@ -27,7 +27,6 @@
             <label for="tittle" class=" bg-info rounded-pill">場所名</label><input type="string" style="width: 40%" name="tittle" id="tittle" required>
           </div>
           {{-- pref --}}
-          <div>
             <div> 
               <label class="bg-info rounded-pill">都道府県</label>
               <select name="pref"  style="width: 100px">
@@ -35,14 +34,15 @@
                   <option value="{{$pref->Pref}}">{{$pref->Pref}}</option>
                 @endforeach
               </select>
+              &nbsp;
             </div>
           {{-- city --}}
             <div>
+              &nbsp;
               <img src="/img/city.png" class="bikeorcar-img">
-              <label for="city" class="ml-3 bg-info rounded-pill">市区町村</label>
+              <label for="city" class="bg-info rounded-pill">市区町村</label>
               <input type="string" id="city" name="city" class="ml-1" style="width: 100px" required>
             </div>
-          </div>
           {{-- URL --}}
           <div>
             <label class="ml-3 bg-info rounded-pill" for="URL">URL</label>
