@@ -45,7 +45,16 @@
             <a href="{{ route('register') }}"><button class="btn btn-success btn-lg btn-block shadow text-white">新規登録</button></a>
             <a href="{{ route('login') }}"><button class="btn btn-secondary btn-lg btn-block shadow text-white">ログイン</button></a>
         {{-- </div> --}}
-        <div class="pb-5 mb-5">{{now()}}<br> </div>
+        
+        <div class="d-block d-sm-none text-center">
+            <a href="https://hb.afl.rakuten.co.jp/hsc/20bca630.fcc5488e.20bca631.12bbb9d1/_RTLink24408?link_type=pict&ut=eyJwYWdlIjoic2hvcCIsInR5cGUiOiJwaWN0IiwiY29sIjoxLCJjYXQiOiIxMjAiLCJiYW4iOiIxNDIxNzk5IiwiYW1wIjpmYWxzZX0%3D" target="_blank" rel="nofollow sponsored noopener" style="word-wrap:break-word;"  >
+                <img src="https://hbb.afl.rakuten.co.jp/hsb/20bca630.fcc5488e.20bca631.12bbb9d1/?me_id=2100001&me_adv_id=1421799&t=pict" border="0" style="margin:2px" alt="" title="">
+            </a>
+            <p></p>
+            <a href="https://hb.afl.rakuten.co.jp/hsc/20f0b300.3c0da10e.20bca631.12bbb9d1/?link_type=pict&ut=eyJwYWdlIjoic2hvcCIsInR5cGUiOiJwaWN0IiwiY29sIjoxLCJjYXQiOiIxIiwiYmFuIjoiMTY3NDAxIiwiYW1wIjpmYWxzZX0%3D" target="_blank" rel="nofollow sponsored noopener" style="word-wrap:break-word;"  >
+                <img src="https://hbb.afl.rakuten.co.jp/hsb/20f0b300.3c0da10e.20bca631.12bbb9d1/?me_id=2101008&me_adv_id=167401&t=pict" border="0" style="margin:2px" alt="" title="">
+            </a>
+        </div>
         @endguest
     @endsection
 </body>
