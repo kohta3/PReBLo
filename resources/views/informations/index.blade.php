@@ -54,6 +54,7 @@
           </div>
           {{-- parkingCar --}}
           <div>
+            <img src="/img/carport.png" class="bikeorcar-img">
             <label for="carport" class='bg-info rounded-pill'>駐車場</label>
             無<input type="radio" id="carport" name="ParkingCar" value="0">
             有<input type="radio" id="carport" class="mr-2" name="ParkingCar" value="1">
