@@ -54,6 +54,9 @@
             <a href="https://hb.afl.rakuten.co.jp/hsc/20f0b300.3c0da10e.20bca631.12bbb9d1/?link_type=pict&ut=eyJwYWdlIjoic2hvcCIsInR5cGUiOiJwaWN0IiwiY29sIjoxLCJjYXQiOiIxIiwiYmFuIjoiMTY3NDAxIiwiYW1wIjpmYWxzZX0%3D" target="_blank" rel="nofollow sponsored noopener" style="word-wrap:break-word;"  >
                 <img src="https://hbb.afl.rakuten.co.jp/hsb/20f0b300.3c0da10e.20bca631.12bbb9d1/?me_id=2101008&me_adv_id=167401&t=pict" border="0" style="margin:2px" alt="" title="">
             </a>
+            <a href="https://hb.afl.rakuten.co.jp/hgc/20f0b5b6.8a425ccc.20bca631.12bbb9d1/?pc=http%3A%2F%2Fwww.rakuten.co.jp%2Fbiccamera%2F&link_type=pict&ut=eyJwYWdlIjoic2hvcCIsInR5cGUiOiJwaWN0IiwiY29sIjoxLCJjYXQiOiIxIiwiYmFuIjoiMTY3MDg4NSIsImFtcCI6ZmFsc2V9" target="_blank" rel="nofollow sponsored noopener" style="word-wrap:break-word;"  >
+                <img src="https://hbb.afl.rakuten.co.jp/hlb/20f0b5b6.8a425ccc.20bca631.12bbb9d1/?sid=1&shop=biccamera&size=1&kind=2&me_id=1269553&me_adv_id=1670885&t=logo" border="0" style="margin:2px" alt="" title="">
+            </a>
         </div>
         @endguest
     @endsection
