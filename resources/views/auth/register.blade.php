@@ -40,22 +40,6 @@
                 </div>
 
                 <div class="form-group row">
-                    <label for="password" class="col-md-5 col-form-label text-md-left text-light">郵便番号<a>&nbsp;&nbsp;<span class="badge-pill badge-danger need-font-size">必須</span></a></label>
-
-                    <div class="col-md-7">
-                        <input type="text" class="form-control @error('postal_code') is-invalid @enderror " name="postal_code" required placeholder="393-1033">
-                    </div>
-                </div>
-
-                <div class="form-group row">
-                    <label for="password" class="col-md-5 col-form-label text-md-left text-light">住所<a>&nbsp;&nbsp;<span class="badge-pill badge-danger need-font-size">必須</span></a></label>
-
-                    <div class="col-md-7">
-                        <input type="text" class="form-control @error('address') is-invalid @enderror" name="address" required placeholder="東京都@@@区@@@3丁目33−37">
-                    </div>
-                </div>
-
-                <div class="form-group row">
                     <label for="password" class="col-md-5 col-form-label text-md-left text-light">電話番号<a>&nbsp;&nbsp;<span class="badge-pill badge-danger need-font-size">必須</span></a></label>
 
                     <div class="col-md-7">

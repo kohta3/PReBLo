@@ -99,41 +99,42 @@
   </div>
 </div>
 
+<div>
   {{-- content new add & top3 --}}
   {{-- new take6 --}}
-  <div class="info-content position-block">
-    <div class="container">
-      <div class="row mr-2">
-        <p class="text-light col-md-12 ml-1 mt-2 h3" ><img src="/img/tourch.png" class="rounded-circle bg-light" alt="newinfo" style="width: 5%">新規投稿一覧</p>
-        @foreach ($info as $information)         
-          <p class="col-md-4 text-left text-light  border" style="height: 300px"> 
-              {{$information->pref.'>'.$information->city}}<br>
-              <a  class='h3' href="{{route('informations.show', $information)}}">{{$information->tittle}}</a><br>
-              {{'ひとこと:'.$information->comment}}<br>
-            <br>
-            <a class="text-center d-block mx-auto" href="{{route('informations.show', $information)}}">
-              @if ($information->image !== "")
-                <img src="{{$information->image}}" class="info-image">
-              @else 
-                <img src="{{ asset('img/dummy.png')}}" class="info-image">
-              @endif
-            </a>
-          </p>
-        @endforeach
-      </div>
+  <div class="info-content position-block" style="display:flex">
+    <div class="container"  >
+        <div class="row mr-2">
+          <p class="text-light col-md-12 ml-1 mt-2 h3" ><img src="/img/tourch.png" class="rounded-circle bg-light" alt="newinfo" style="width: 5%">新規投稿一覧</p>
+          @foreach ($info as $information)         
+            <p class="col-md-4 text-left text-light  border" style="height: 300px"> 
+                {{$information->pref.'>'.$information->city}}<br>
+                <a  class='h3' href="{{route('informations.show', $information)}}">{{$information->tittle}}</a><br>
+                {{'ひとこと:'.$information->comment}}<br>
+              <br>
+              <a class="text-center d-block mx-auto" href="{{route('informations.show', $information)}}">
+                @if ($information->image !== "")
+                  <img src="{{$information->image}}" class="info-image">
+                @else 
+                  <img src="{{ asset('img/dummy.png')}}" class="info-image">
+                @endif
+              </a>
+            </p>
+          @endforeach
+        </div>
 
 
 
-
-      {{-- top3 --}}
+      
+          {{-- top3 --}}
       <div class="row">
         <div class="col-md-12">
           <p class="text-light col-md-12 ml-1 mt-2 h3"><img src="/img/rank.png" class="rounded-circle bg-light" alt="newinfo" style="width: 5%">人気ランキング</p>
         </div>
 
-            <?php $i=0;?>
-          @foreach ($topinfo as $topinfor)
-            <?php $i=$i+1;?>
+        <?php $i=0;?>
+        @foreach ($topinfo as $topinfor)
+        <?php $i=$i+1;?>
         <div class="col-md-12 mb-3 border border-primary shadow text-light top3">
           <div class="w-100">
             <span class="h1">
@@ -144,7 +145,7 @@
               {{$topinfor->pref.'>'.$topinfor->city}}
             </span>
           </div>
-          
+              
           <div class='align-items-center h4' >  
             <div class="container">
               <div class="row">  
@@ -159,16 +160,17 @@
                 </div>
 
                 <div class="col-md-8">
-                    <p><a class="mt-3 h1" href="{{route('informations.show', $information)}}">{{$topinfor->tittle}}</a></p>
-                    <a class="h6" href="{{$topinfor->URL}}">サイトを開く</a>
-                    <p class="h5 mt-3 shadow-lg">{{'ひとこと:'.$topinfor->comment}}</p>
+                  <p><a class="mt-3 h1" href="{{route('informations.show', $information)}}">{{$topinfor->tittle}}</a></p>
+                  <a class="h6" href="{{$topinfor->URL}}">サイトを開く</a>
+                  <p class="h5 mt-3 shadow-lg">{{'ひとこと:'.$topinfor->comment}}</p>
 
-                    <?php
-                        if($information->ParkingCar===0)$judgeCar='駐車場有り';
-                      else$judgeCar='駐車場無し';
-                        if($information->ParkingBicycles===0)$judgeBycycle='駐輪場有り';
-                      else$judgeBycycle='駐輪場無し';
-                    ?>
+                  <?php
+                      if($information->ParkingCar===0)$judgeCar='駐車場有り';
+                    else$judgeCar='駐車場無し';
+                      if($information->ParkingBicycles===0)$judgeBycycle='駐輪場有り';
+                    else$judgeBycycle='駐輪場無し';
+                  ?>
+                    
                   <div class="text-nowrap h5 mt-3"> 
                     <span style="height: 10%"><img src="/img/carport.png" class="bikeorcar-img">{{$judgeCar}}</span>
                     <span><img src="/img/bike.png" class="bikeorcar-img">{{$judgeBycycle}}</span>
@@ -178,28 +180,24 @@
             </div>
           </div>
         </div>
-            @endforeach   
+        @endforeach  
+    </div>    
+  </div>
 
-          
+    <div class="info-afi d-none d-sm-block">
+      {{-- rakuten afiriate --}}
+      <div class="mb-5  mt-5 responsive-afi text-center">
+        <a href="https://hb.afl.rakuten.co.jp/hsc/20bca630.fcc5488e.20bca631.12bbb9d1/?link_type=pict&ut=eyJwYWdlIjoic2hvcCIsInR5cGUiOiJwaWN0IiwiY29sIjoxLCJjYXQiOiIxMjAiLCJiYW4iOiIxNDIxNzk5IiwiYW1wIjpmYWxzZX0%3D" target="_blank" rel="nofollow sponsored noopener" class='m-5' style="word-wrap:break-word;">
+          <img src="https://hbb.afl.rakuten.co.jp/hsb/20bca630.fcc5488e.20bca631.12bbb9d1/?me_id=2100001&me_adv_id=1421799&t=pict" border="0" class='image-responsive' style="width:70%" alt="" title=""></a>
+      </div>
+      {{-- rakuten afi map --}}
+      <div class="responsive-afi text-center">  
+        <a href="https://hb.afl.rakuten.co.jp/ichiba/20f005cf.bc61c761.20f005d0.b927bd33/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Fbook%2F16614202%2F&link_type=pict&ut=eyJwYWdlIjoiaXRlbSIsInR5cGUiOiJwaWN0Iiwic2l6ZSI6IjI0MHgyNDAiLCJuYW0iOjEsIm5hbXAiOiJyaWdodCIsImNvbSI6MSwiY29tcCI6ImRvd24iLCJwcmljZSI6MCwiYm9yIjowLCJjb2wiOjEsImJidG4iOjEsInByb2QiOjAsImFtcCI6ZmFsc2V9" target="_blank" rel="nofollow sponsored noopener" style="word-wrap:break-word;"  ><img src="https://hbb.afl.rakuten.co.jp/hgb/20f005cf.bc61c761.20f005d0.b927bd33/?me_id=1213310&item_id=20261664&pc=https%3A%2F%2Fthumbnail.image.rakuten.co.jp%2F%400_mall%2Fbook%2Fcabinet%2F6612%2F9784398656612.jpg%3F_ex%3D240x240&s=240x240&t=pict" border="0" style="margin:2px" alt="" title=""><p>ツーリングマップル　北海道</p></a>
+        <a href="https://hb.afl.rakuten.co.jp/ichiba/20f005cf.bc61c761.20f005d0.b927bd33/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Fbook%2F16614196%2F&link_type=pict&ut=eyJwYWdlIjoiaXRlbSIsInR5cGUiOiJwaWN0Iiwic2l6ZSI6IjI0MHgyNDAiLCJuYW0iOjEsIm5hbXAiOiJyaWdodCIsImNvbSI6MSwiY29tcCI6ImRvd24iLCJwcmljZSI6MCwiYm9yIjowLCJjb2wiOjEsImJidG4iOjEsInByb2QiOjAsImFtcCI6ZmFsc2V9" target="_blank" rel="nofollow sponsored noopener" style="word-wrap:break-word;"  ><img src="https://hbb.afl.rakuten.co.jp/hgb/20f005cf.bc61c761.20f005d0.b927bd33/?me_id=1213310&item_id=20261658&pc=https%3A%2F%2Fthumbnail.image.rakuten.co.jp%2F%400_mall%2Fbook%2Fcabinet%2F6674%2F9784398656674.jpg%3F_ex%3D240x240&s=240x240&t=pict" border="0" style="margin:2px" alt="" title=""><p>ツーリングマップル　九州 沖縄</p></a>
+      </div>
+      <div class="responsive-afi text-center">
+        <a href="https://hb.afl.rakuten.co.jp/hsc/20bf85ec.e6f606ee.20bca631.12bbb9d1/?link_type=pict&ut=eyJwYWdlIjoic2hvcCIsInR5cGUiOiJwaWN0IiwiY29sIjoxLCJjYXQiOiIxIiwiYmFuIjoiMTY3Mzk3IiwiYW1wIjpmYWxzZX0%3D" target="_blank" rel="nofollow sponsored noopener" style="word-wrap:break-word;"  ><img src="https://hbb.afl.rakuten.co.jp/hsb/20bf85ec.e6f606ee.20bca631.12bbb9d1/?me_id=2101008&me_adv_id=167397&t=pict" border="0" style="margin:2px" alt="" title=""></a>
+      </div>
     </div>
-  </div> 
-</div>    
-
-
-<div class="info-afi d-none d-sm-block">
-  {{-- rakuten afiriate --}}
-  <div class="mb-5  mt-5 responsive-afi text-center">
-    <a href="https://hb.afl.rakuten.co.jp/hsc/20bca630.fcc5488e.20bca631.12bbb9d1/?link_type=pict&ut=eyJwYWdlIjoic2hvcCIsInR5cGUiOiJwaWN0IiwiY29sIjoxLCJjYXQiOiIxMjAiLCJiYW4iOiIxNDIxNzk5IiwiYW1wIjpmYWxzZX0%3D" target="_blank" rel="nofollow sponsored noopener" class='m-5' style="word-wrap:break-word;">
-      <img src="https://hbb.afl.rakuten.co.jp/hsb/20bca630.fcc5488e.20bca631.12bbb9d1/?me_id=2100001&me_adv_id=1421799&t=pict" border="0" class='image-responsive' style="width:70%" alt="" title=""></a>
-  </div>
-  {{-- rakuten afi map --}}
-  <div class="responsive-afi text-center">  
-    <a href="https://hb.afl.rakuten.co.jp/ichiba/20f005cf.bc61c761.20f005d0.b927bd33/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Fbook%2F16614202%2F&link_type=pict&ut=eyJwYWdlIjoiaXRlbSIsInR5cGUiOiJwaWN0Iiwic2l6ZSI6IjI0MHgyNDAiLCJuYW0iOjEsIm5hbXAiOiJyaWdodCIsImNvbSI6MSwiY29tcCI6ImRvd24iLCJwcmljZSI6MCwiYm9yIjowLCJjb2wiOjEsImJidG4iOjEsInByb2QiOjAsImFtcCI6ZmFsc2V9" target="_blank" rel="nofollow sponsored noopener" style="word-wrap:break-word;"  ><img src="https://hbb.afl.rakuten.co.jp/hgb/20f005cf.bc61c761.20f005d0.b927bd33/?me_id=1213310&item_id=20261664&pc=https%3A%2F%2Fthumbnail.image.rakuten.co.jp%2F%400_mall%2Fbook%2Fcabinet%2F6612%2F9784398656612.jpg%3F_ex%3D240x240&s=240x240&t=pict" border="0" style="margin:2px" alt="" title=""><p>ツーリングマップル　北海道</p></a>
-    <a href="https://hb.afl.rakuten.co.jp/ichiba/20f005cf.bc61c761.20f005d0.b927bd33/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Fbook%2F16614196%2F&link_type=pict&ut=eyJwYWdlIjoiaXRlbSIsInR5cGUiOiJwaWN0Iiwic2l6ZSI6IjI0MHgyNDAiLCJuYW0iOjEsIm5hbXAiOiJyaWdodCIsImNvbSI6MSwiY29tcCI6ImRvd24iLCJwcmljZSI6MCwiYm9yIjowLCJjb2wiOjEsImJidG4iOjEsInByb2QiOjAsImFtcCI6ZmFsc2V9" target="_blank" rel="nofollow sponsored noopener" style="word-wrap:break-word;"  ><img src="https://hbb.afl.rakuten.co.jp/hgb/20f005cf.bc61c761.20f005d0.b927bd33/?me_id=1213310&item_id=20261658&pc=https%3A%2F%2Fthumbnail.image.rakuten.co.jp%2F%400_mall%2Fbook%2Fcabinet%2F6674%2F9784398656674.jpg%3F_ex%3D240x240&s=240x240&t=pict" border="0" style="margin:2px" alt="" title=""><p>ツーリングマップル　九州 沖縄</p></a>
-  </div>
-  <div class="responsive-afi text-center">
-    <a href="https://hb.afl.rakuten.co.jp/hsc/20bf85ec.e6f606ee.20bca631.12bbb9d1/?link_type=pict&ut=eyJwYWdlIjoic2hvcCIsInR5cGUiOiJwaWN0IiwiY29sIjoxLCJjYXQiOiIxIiwiYmFuIjoiMTY3Mzk3IiwiYW1wIjpmYWxzZX0%3D" target="_blank" rel="nofollow sponsored noopener" style="word-wrap:break-word;"  ><img src="https://hbb.afl.rakuten.co.jp/hsb/20bf85ec.e6f606ee.20bca631.12bbb9d1/?me_id=2101008&me_adv_id=167397&t=pict" border="0" style="margin:2px" alt="" title=""></a>
-  </div>
 </div>
-
 @endsection
