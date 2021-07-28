@@ -18,7 +18,7 @@
             @endforeach
           </select>
           {{-- comment --}}
-          <div class="mr-1" style="width: 100%">
+          <div class="mr-1" style="width: 80%">
             <label class=" bg-info rounded-pill" for="comment" maxlength='100'>ひとこと</label>
             <input type="string" style="width: 80%" name="comment" id="comment" required>
           </div>
@@ -71,9 +71,9 @@
             <input type="time" name="close" id="close" required>
           </div>
           {{-- about --}}
-          <div>
+          <div style="width: 80%">
             <label for="about" class="bg-info rounded-pill align-top">about</label>
-            <textarea name="about" class="ml-1 container-textarea" id="about"></textarea>
+            <textarea name="about" class="ml-1 container-textarea" id="about">未入力</textarea>
           </div>
           
           {{-- photo --}}
@@ -98,7 +98,7 @@
 
   {{-- content new add & top3 --}}
   {{-- new take6 --}}
-  <div class="info-content">
+  <div class="info-content position-block">
     <div class="container">
       <div class="row mr-2">
         <p class="text-light col-md-12 ml-1 mt-2 h3" ><img src="/img/tourch.png" class="rounded-circle bg-light" alt="newinfo" style="width: 5%">新規投稿一覧</p>
@@ -166,10 +166,10 @@
                         if($information->ParkingBicycles===0)$judgeBycycle='駐輪場有り';
                       else$judgeBycycle='駐輪場無し';
                     ?>
-                  <span class="h5 mt-3"> 
-                    <img src="/img/carport.png" class="bikeORcarport">{{$judgeCar}}
-                    <img src="/img/bike.png" class="bikeORcarport ">{{$judgeBycycle}}
-                  </span>
+                  <div class="text-nowrap h5 mt-3"> 
+                    <span style="height: 10%"><img src="/img/carport.png" class="bikeorcar-img">{{$judgeCar}}</span>
+                    <span><img src="/img/bike.png" class="bikeorcar-img">{{$judgeBycycle}}</span>
+                  </div>
                 </div>
               </div>
             </div>
