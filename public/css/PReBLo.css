@@ -164,6 +164,8 @@ form div{
 /* show */
 .show-position{
   vertical-align: middle;
+  text-align: center;
+  height: 100%;
 }
 
 .show-image{
@@ -173,8 +175,9 @@ form div{
 }
 
 .show-infor{
+  color: #ffffff;
   width: 100%;
   height: 100%;
-  background:rgba(56, 112, 216, 0.596);
+  background:rgba(56, 112, 216, 0.322);
   text-align: left;
 }
