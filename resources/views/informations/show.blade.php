@@ -19,7 +19,7 @@
       @endif
     </div>
 
-    <div class="col-sm-5 show-position show-infor">
+    <div class="col-sm-5 show-position show-infor text-light">
       <?php
         if($information->ParkingCar===0)$judgeCar='駐車場有り';
         else$judgeCar='駐車場無し';
