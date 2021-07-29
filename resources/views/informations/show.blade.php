@@ -9,17 +9,17 @@
 </div>
 @endif
 
-<div class='m-0 shadow-lg h-60'>
-  <div class="row m-0 p-0">
+<div class='shadow-lg h-60 '>
+  <div class="row m-3">
     <div class="col-sm-7 show-position">
       @if ($information->image !== "")
-        <img src="{{$information->image}}" class="img-fluid">
+        <img src="{{$information->image}}" class=" img-fluid">
         @else
         <img src="{{ asset('img/dummy.png')}}" class="img-fluid">
       @endif
     </div>
 
-    <div class="col-sm-5 show-position show-infor text-light">
+    <div class="col-sm-5 show-position show-infor">
       <?php
         if($information->ParkingCar===0)$judgeCar='駐車場有り';
         else$judgeCar='駐車場無し';
