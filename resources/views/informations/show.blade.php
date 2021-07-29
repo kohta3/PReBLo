@@ -13,9 +13,9 @@
   <div class="row m-0 p-0">
     <div class="col-sm-7 show-position">
       @if ($information->image !== "")
-        <img src="{{$information->image}}" class="show-image">
+        <img src="{{$information->image}}" class="img-fluid">
         @else
-        <img src="{{ asset('img/dummy.png')}}" class="show-image">
+        <img src="{{ asset('img/dummy.png')}}" class="img-fluid">
       @endif
     </div>
 
