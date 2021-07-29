@@ -135,6 +135,22 @@ form div{
   min-height: 15rem;
 }
 
+/* show */
+.show-position{
+  vertical-align: middle;
+  text-align: center;
+  height: 100%;
+}
+
+
+.show-infor{
+  color: #ffffff;
+  width: 100%;
+  height: 100%;
+  background:rgba(56, 112, 216, 0.322);
+  text-align: left;
+}
+
 
 @media screen and (max-width: 768px){
   .bikeorcar-img{
@@ -161,18 +177,3 @@ form div{
   }
 }
 
-/* show */
-.show-position{
-  vertical-align: middle;
-  text-align: center;
-  height: 100%;
-}
-
-
-.show-infor{
-  color: #ffffff;
-  width: 100%;
-  height: 100%;
-  background:rgba(56, 112, 216, 0.322);
-  text-align: left;
-}
