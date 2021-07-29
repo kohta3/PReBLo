@@ -9,7 +9,7 @@
 </div>
 @endif
 
-<div class='m-2 shadow-lg h-60'>
+<div class='m-0 shadow-lg h-60'>
   <div class="row m-0 p-0">
     <div class="col-sm-7 show-position">
       @if ($information->image !== "")
@@ -27,8 +27,8 @@
         else$judgeBycycle='駐輪場無し';
       ?>
       <p class="h2">{{$information->tittle}}</p>
-      <p>{{$information->pref}}</p>
-      <p>{{$information->URL}}</p>
+      <p>{{$information->pref . $information->city}}</p>
+      <p><a href='{{$information->URL}}'>ウェブサイトにアクセス</a></p>
       <p>{{$information->TEL}}</p>
       <p>{{$information->about}}</p>
       <p>{{$information->OfficeHour}}</p>
@@ -46,7 +46,7 @@
 
 
   <div class="row">
-
+    <h1>kohta</h1>
   </div>
 </div>
 
