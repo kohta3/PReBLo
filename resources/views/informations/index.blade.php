@@ -152,7 +152,7 @@
             <div class="container">
               <div class="row">  
                 <div class="col-md-4 m-0 text-center">  
-                  <a href="{{route('informations.show', $information)}}" class="align-items-center">    
+                  <a href="{{route('informations.show', $topinfor)}}" class="align-items-center">    
                     @if ($topinfor->image !== "")
                         <img src="{{$topinfor->image}}" class="info-image">
                         @else
@@ -162,7 +162,7 @@
                 </div>
 
                 <div class="col-md-8">
-                  <p><a class="mt-3 h1" href="{{route('informations.show', $information)}}">{{$topinfor->tittle}}</a></p>
+                  <p><a class="mt-3 h1" href="{{route('informations.show', $topinfor)}}">{{$topinfor->tittle}}</a></p>
                   <a class="h6" href="{{$topinfor->URL}}">サイトを開く</a>
                   <p class="h5 mt-3 shadow-lg">{{'ひとこと:'.$topinfor->comment}}</p>
 

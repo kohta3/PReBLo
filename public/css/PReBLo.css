@@ -160,3 +160,21 @@ form div{
     height: auto;
   }
 }
+
+/* show */
+.show-position{
+  vertical-align: middle;
+}
+
+.show-image{
+  max-width: 100%;
+  max-height:65%;
+  margin: auto 0;
+}
+
+.show-infor{
+  width: 100%;
+  height: 100%;
+  background:rgba(56, 112, 216, 0.596);
+  text-align: left;
+}
