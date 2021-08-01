@@ -10,6 +10,8 @@ use App\User;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Storage;
+use GuzzleHttp\Client;
+use RakutenRws_Client;
 
 class InformationController extends Controller
 {
@@ -83,7 +85,30 @@ class InformationController extends Controller
      */
     public function show(Information $information)
     {
-        return view('informations.show', compact('information'));
+        $client = new Client();
+
+        $freeword=$information->city." ".$information->pref;
+        
+        
+                // リクエスト送信
+                $json_res = $client->request('GET','https://app.rakuten.co.jp/services/api/Travel/KeywordHotelSearch/20170426?',['query' =>[
+                    'applicationId'=>'1001393711643575856',    
+                    'format'=>'json',
+                    'affiliateId'=>'20c8801b.9bc4906b.20c8801c.3a69e429',
+                    'keyword'=>$freeword,
+                    'hits'=>3,
+                    'elements'=>'hotelName,hotelInformationUrl,hotelImageUrl,hotelMapImageUrl,address1,address2,reviewAverage'
+                    ]]
+                    )->getBody()->getContents();
+                    
+                    $response = json_decode($json_res,true);
+                    $hotelInfo = [];
+                    $i=0;
+                    foreach($response['hotels'] as $result){
+                        $hotelInfo[$i]=$result['hotel'][0]['hotelBasicInfo'];
+                        $i=$i+1;
+                    };
+        return view('informations.show', compact('information','hotelInfo'));
     }
 
     /**
