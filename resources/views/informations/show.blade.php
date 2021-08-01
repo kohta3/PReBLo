@@ -49,7 +49,7 @@
       </div>
     </div>
   </div>
-
+  <div class="w-100 h-2 text-light border">付近の宿泊施設↓</div>
   <div class="row mx-3">
     @foreach ($hotelInfo as $hotel)
     <div class="col-md-4 shadow bg-secondary text-light ">     

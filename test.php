@@ -4,9 +4,9 @@ use GuzzleHttp\Client;
 
 $client = new Client();
 
-$freeword='北海道';
+$freeword='fvkldfzmbkljdzfnfbjklzdfnbjkfncb';
 
-
+    try{
         // リクエスト送信
         $json_res = $client->request('GET','https://app.rakuten.co.jp/services/api/Travel/KeywordHotelSearch/20170426?',['query' =>[
             'applicationId'=>'1001393711643575856',    
@@ -17,7 +17,9 @@ $freeword='北海道';
             'elements'=>'hotelName,hotelInformationUrl,hotelImageUrl,hotelMapImageUrl,address1,address2,reviewAverage'
             ]]
             )->getBody()->getContents();
-            
+        }catch(Exception $e){       
+            return print("エラーが発生しました。APIのURLを確認してください。");
+                }
             $response = json_decode($json_res,true);
             $hotelInfo = [];
             $i=0;

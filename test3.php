@@ -2,7 +2,6 @@
 require 'vendor/autoload.php';
 
 use GuzzleHttp\Client;
-use phpDocumentor\Reflection\DocBlock\Tags\Var_;
 
 # 初期設定
 $KEYID = "f0d3cc012ab27202";
@@ -14,8 +13,9 @@ $FORMAT = "json";
 $PARAMS = ["key"=> $KEYID, "count"=>$HIT_PER_PAGE, "pref"=>$PREF, "keyword"=>$FREEWORD, "format"=>$FORMAT,"count"=>2];
 $client = new Client();
 $json_res = $client->request('GET', "http://webservice.recruit.co.jp/hotpepper/gourmet/v1/", ['query' => $PARAMS])->getBody();
+print_r($json_res);
 $response = json_decode($json_res,true);
-print_r($response);
+// print_r($response);
 // function write_data_to_csv($params){
     
 //     $restaurants = [["名称","営業日","住所","アクセス"]];
