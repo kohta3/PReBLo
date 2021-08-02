@@ -10,7 +10,7 @@
 @endif
 
 <div class='shadow-lg container-fluid'>
-  <div class="row m-2" style="height: 750px">
+  <div class="row m-2 show-breakpoint">
     <div class="col-md-6 show-position h-100">
       @if ($information->image !== "")
         <img src="{{$information->image}}" class="show-img">
@@ -19,7 +19,7 @@
       @endif
     </div>
 
-    <div class="col-md-6 show-position show-infor">
+    <div class="col-md-6 show-position show-infor h-100">
       <div class="h-50 border">
         <div class="m-3">
           <?php
@@ -45,11 +45,11 @@
         </div>
       </div>
       <div class="h-50 text-light">
-        map
+        <p>map</p>
       </div>
     </div>
   </div>
-  <div class="w-100 h-2 text-light border">付近の宿泊施設↓</div>
+  <div class="w-100 mt-5 mb-2 text-light"><h2 class="bg-dark shadow m-3">付近の宿泊施設↓</h2></div>
   <div class="row mx-3">
     @foreach ($hotelInfo as $hotel)
     <div class="col-md-4 shadow bg-secondary text-light ">     
@@ -73,6 +73,7 @@
     </div>
     @endforeach
   </div>
+  <div class="w-100 mt-5 mb-2 text-light"><h2 class="bg-dark shadow m-3">付近の飲食店↓</h2></div>
   
 </div>
 
