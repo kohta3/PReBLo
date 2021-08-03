@@ -108,7 +108,20 @@ class InformationController extends Controller
                         $hotelInfo[$i]=$result['hotel'][0]['hotelBasicInfo'];
                         $i=$i+1;
                     };
-        return view('informations.show', compact('information','hotelInfo'));
+ 
+                    $PARAMS = ["key"=>'f0d3cc012ab27202', "count"=>3, "keyword"=>$information->pref , "format"=>'json'];
+                    $client = new Client();
+                    $json_res = $client->request('GET', "http://webservice.recruit.co.jp/hotpepper/gourmet/v1/", ['query' => $PARAMS])->getBody()->getContents(); 
+                    $response = json_decode($json_res,true);
+                       $eatInfo = [];
+                       $i=0;
+                       foreach($response['results']['shop'] as $result){
+                           $eatInfo[$i]=$result;
+                           $i=$i+1;
+                       };
+                       
+
+        return view('informations.show', compact('information','hotelInfo','eatInfo'));
     }
 
     /**

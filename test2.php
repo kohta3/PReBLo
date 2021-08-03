@@ -3,30 +3,18 @@
  require 'vendor/autoload.php';
  use GuzzleHttp\Client;
 
-$client = new RakutenRws_Client();
-// アプリID (デベロッパーID) をセットします
-$client->setApplicationId('1001393711643575856');
+
+ $shopWORD = "渋谷駅";
  
-// アフィリエイトID をセットします(任意)
-$client->setAffiliateId('20c8801b.9bc4906b.20c8801c.3a69e429');
- 
-// IchibaItem/Search API から検索します
-$json_res = $client->execute('TravelKeywordHotelSearch', array(
-    'format'=>'json',
-    'keyword' => '北海道',
-    'hits'=>3,
-    'formatVersion'=>2,
-    'responseType'=>'small',
-    // 'elements'=>'hotelName,hotelInformationUrl,hotelImageUrl,hotelMapImageUrl,address1,reviewAverage'
-));
- 
-// レスポンスが正しいかを isOk() で確認することができます
-if ($json_res->isOk()) {
-    // 配列アクセスによりレスポンスにアクセスすることができます。
-    // print_r($json_res);
-    $response=json_decode($json_res,true);
-    print_r($response."\n");
-} else {
-    echo 'Error:'.$response->getMessage();
-}
-?>
+ $PARAMS = ["key"=>'f0d3cc012ab27202', "count"=>3, "keyword"=>$shopWORD, "format"=>'json'];
+ $client = new Client();
+ $json_res = $client->request('GET', "http://webservice.recruit.co.jp/hotpepper/gourmet/v1/", ['query' => $PARAMS])->getBody()->getContents(); 
+ $response = json_decode($json_res,true);
+    $eatInfo = [];
+    $i=0;
+    foreach($response['results']['shop'] as $result){
+        $eatInfo[$i]=$result;
+        $i=$i+1;
+    };
+    print_r($eatInfo);
+    ?>

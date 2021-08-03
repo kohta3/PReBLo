@@ -74,7 +74,32 @@
     @endforeach
   </div>
   <div class="w-100 mt-5 mb-2 text-light"><h2 class="bg-dark shadow m-3">付近の飲食店↓</h2></div>
-  
+  <div class="row mx-3">
+    @foreach ($eatInfo as $shop)
+      <div class="col-md-4 shadow bg-secondary text-light ">     
+          <div class='h5 m-2 shadow w-100 h-10'>
+            {{$shop['name']}}
+          </div>
+          <div>
+            <ul class='text-left p-0' style="list-style:none ">
+              <li  class="text-dark" style="background-color:#b0c4de ">{{$shop['catch']}}</li>
+              <li>{{"address:".$shop['address']}}</li>
+              <li>{{"access:".$shop['access']}}</li>
+              <li>{{'平均予算'.$shop['budget']['name']}}</li>
+            </ul>
+            <p>
+                <a href='{{$shop['urls']['pc']}}'>お店の詳細</a>
+            </p>
+          </div>
+
+          <div class='text-nowrap'>
+            <img src='{{$shop['photo']['mobile']['l']}}' alt='shopImage' class="show-hotel-img">
+            <img src='{{$shop['photo']['pc']['l']}}' alt='shopImage' class="show-hotel-img">
+          </div>
+            <p>{{$hotel['reviewAverage']}}</p>
+      </div>
+    @endforeach
+  </div>
 </div>
 
 
