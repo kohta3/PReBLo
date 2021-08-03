@@ -12,7 +12,7 @@
     <meta property="og:title" content="投稿型旅行サイト!!PReBLo" />
     <meta property="og:description" content=" 観光地、宿泊施設、飲食店をみんなに共有しよう！" />
     <meta property="og:site_name" content="PReBLo" />
-    <meta property="og:image" content="{{asset('img/carucell01.jpg')}} />
+    <meta property="og:image" content={{asset('img/meta.png')}} />
     
 </head>
 
