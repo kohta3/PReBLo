@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('content')
-<div class="container">
+<div class="container " style="min-height: 52rem">
     <div class="row justify-content-center">
         <div class="col-md-5 bg-light rounded">
             <h3 class="mt-3 mb-3">ログイン</h3>

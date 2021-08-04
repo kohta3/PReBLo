@@ -1,8 +1,8 @@
 @extends('layouts.app')
 
 @section('content')
-<div class="container p-5 mb-100">
-    <div class="row justify-content-center">
+<div class="container p-5 mb-100" style="min-height: 52rem">
+    <div class="row justify-content-center mt-5 pt-5">
         <div class="col-md-8">
             <div class="card">
                 <div class="card-header">{{ __('Dashboard') }}</div>

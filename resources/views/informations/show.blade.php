@@ -57,17 +57,20 @@
           class='h5 m-2 shadow w-100 h-10'>{{$hotel['hotelName']}}
         </div>
         <div>
-          <p>
-            {{$hotel['address1'].$hotel['address2']}}
+          <p><span class="text-dark show-oricolor" >{{$hotel['hotelSpecial']}}</span><br>
+            <span class="h4 mt-1">住&nbsp;所:</span>{{$hotel['address1'].$hotel['address2']}}<br>
+            <span class="h4 mt-1">アクセス:</span>{{$hotel['access']}}<br>
+            <span class="h4 mt-1">宿泊¥{{$hotel['hotelMinCharge']}}より</span>
           </p>
+          
           <p>
               <a href='{{$hotel['hotelInformationUrl']}}'>ホテルの詳細</a>
           </p>
         </div>
 
         <div class='text-nowrap'>
-          <img src='{{$hotel['hotelImageUrl']}}' alt='hotelImage' class="show-hotel-img">
-          <img src='{{$hotel['hotelMapImageUrl']}}' alt='hotelImage' class="show-hotel-img">
+          <img src='{{$hotel['hotelImageUrl']}}' alt='hotelImage' class="show-hotel-img show-img">
+          <img src='{{$hotel['roomImageUrl']}}' alt='hotelImage' class="show-hotel-img">
         </div>
           <p>{{$hotel['reviewAverage']}}</p>
     </div>
@@ -82,10 +85,11 @@
           </div>
           <div>
             <ul class='text-left p-0' style="list-style:none ">
-              <li  class="text-dark" style="background-color:#b0c4de ">{{$shop['catch']}}</li>
-              <li>{{"address:".$shop['address']}}</li>
-              <li>{{"access:".$shop['access']}}</li>
-              <li>{{'平均予算'.$shop['budget']['name']}}</li>
+              <p  class="text-dark" style="background-color:#b0c4de ">{{$shop['catch']}}</p>
+              <span class="h4 mt-1">住所:</span>{{$shop['address']}}<br>
+              <span class="h4 mt-1">アクセス:</span>{{$shop['access']}}<br>
+              <span class="h4 mt-1">平均予算</span>{{$shop['budget']['name']}}<br>
+              </span>
             </ul>
             <p>
                 <a href='{{$shop['urls']['pc']}}'>お店の詳細</a>
