@@ -28,16 +28,21 @@
                     <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
                 </ol>
                 <div class="carousel-inner">
-                <div class="carousel-item active">
-                    <img class="d-block w-85 img-fluid" src="{{asset('img/carucell01.jpg')}}" alt="d-block img-fluid">
-                    <div class="card-img-overlay">
-                        <p class="text-white  h1">PReBLo<br>Place<br>Recomend<br>By<br>Local</p>
+                    <div class="carousel-item active">
+                        <img class="d-block w-85 img-fluid" src="{{asset('img/carucell01.jpg')}}" alt="d-block img-fluid">
+                        <div class="card-img-overlay">
+                            <p class="text-white  h1">PReBLo<br>Place<br>Recomend<br>By<br>Local</p>
+                        </div>
                     </div>
                 </div>
                 <div class="carousel-item">
                     <img class="d-block w-85 img-fluid" src="{{asset('img/carucell02.jpg')}}" alt="d-block img-fluid">
                     <div class="card-img-overlay ">
-                        <p class="text-white  h1">Could you tell me way to the toilet?<br class="m-5">&nbsp;&nbsp;&nbsp;&nbsp; No I can't...<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; because....<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; I'm toilet</p>
+                        <p class="text-white  h1">Could you tell me way to the toilet?
+                            <br class="m-5">&nbsp;&nbsp;&nbsp;&nbsp; No I can't...
+                            <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; because....
+                            <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; I'm toilet
+                        </p>
                     </div>
                 </div>
                 <div class="carousel-item">

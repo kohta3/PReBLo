@@ -40,14 +40,6 @@
                     </div>
 
                     <div class="form-group row">
-                        <label for="password" class="col-md-5 col-form-label text-md-left text-light">電話番号<a>&nbsp;&nbsp;<span class="badge-pill badge-danger need-font-size">必須</span></a></label>
-
-                        <div class="col-md-7">
-                            <input type="text" class="form-control @error('phone') is-invalid @enderror" name="phone" required placeholder="080-0000-0000">
-                        </div>
-                    </div>
-
-                    <div class="form-group row">
                         <label for="password" class="col-md-5 col-form-label text-md-left text-light">パスワード<a>&nbsp;&nbsp;<span class="badge-pill badge-danger need-font-size">必須</span></a></label>
 
                         <div class="col-md-7">
