@@ -12,14 +12,14 @@
                     @csrf
 
                     <div class="form-group row">
-                        <label for="name" class="col-md-5 col-form-label text-md-left text-light">氏名<span class="ml-1 "><a>&nbsp;&nbsp;<span class="badge-pill badge-danger need-font-size">必須</span></a></label>
+                        <label for="name" class="col-md-5 col-form-label text-md-left text-light">表示名<span class="ml-1 "><a>&nbsp;&nbsp;<span class="badge-pill badge-danger need-font-size">必須</span></a></label>
 
                         <div class="col-md-7">
                             <input id="name" type="text" class="form-control @error('name') is-invalid @enderror " name="name" value="{{ old('name') }}" required autocomplete="name" autofocus placeholder="PReBLoTARO">
 
                             @error('name')
                             <span class="invalid-feedback" role="alert">
-                                <strong>氏名を入力してください</strong>
+                                <strong>表示名を入力してください</strong>
                             </span>
                             @enderror
                         </div>

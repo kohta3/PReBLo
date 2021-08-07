@@ -1,6 +1,6 @@
 @component('mail::message')
 {{-- Greeting --}}
-@if (! empty($greeting))
+@if (! empty($greeting)):
 # {{ $greeting }}
 @else
 @if ($level === 'error')
