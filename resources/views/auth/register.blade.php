@@ -39,6 +39,7 @@
                         </div>
                     </div>
 
+
                     <div class="form-group row">
                         <label for="password" class="col-md-5 col-form-label text-md-left text-light">パスワード<a>&nbsp;&nbsp;<span class="badge-pill badge-danger need-font-size">必須</span></a></label>
 
@@ -54,10 +55,9 @@
                     </div>
 
                     <div class="form-group row">
-                        <label for="password-confirm" class="col-md-5 col-form-label text-md-left"></label>
+                        <label for="password-confirm" class="col-md-5 col-form-label text-md-left">パスワードの確認</label>
 
                         <div class="col-md-7">
-                            <label for="password" class="col-md-5 col-form-label text-md-left text-light">パスワードの確認</label>
                             <input id="password-confirm" type="password" class="form-control preblo-login-input" placeholder="パスワードの確認"  name="password_confirmation" required autocomplete="new-password">
                         </div>
                     </div>
