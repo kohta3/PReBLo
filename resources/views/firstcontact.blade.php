@@ -66,20 +66,21 @@
                     <div class="m-1 bg-dark text-white shadow">
                         <span>投稿時間[{{$infoTime}}]</span><br>
                         <div class="text-nowrap row">
-                            <span class="text-center col">
+                            <span class="text-center col-md-5" style="height: 10rem">
                                 @if ($newInfo->image !== "")
-                                    <img src="{{$newInfo->image}}" class="info-image">
+                                    <img src="{{$newInfo->image}}" class="TopImageInfo">
                                     @else
-                                    <img src="{{ asset('img/dummy.png')}}" class="info-image">
+                                    <img src="{{ asset('img/dummy.png')}}" class="TopImageInfo">
                                 @endif
                             </span>
-                                <div class="align-items-start  col">
-                                        <span class="text-success h4">{{$newInfo->tittle}}</span><br>
-                                        <span style="font-size: h5">{{$newInfo->pref .'>'. $newInfo->city}}</span><br>
-                                    <span class="text-left">
-                                        投稿者のコメント : {{$newInfo->comment}}
-                                    </span>
+                            <div class="align-items-start  col-md-7">
+                                <span class="text-success h4">{{$newInfo->tittle}}</span><br>
+                                <span style="font-size: h5">{{$newInfo->pref .'>'. $newInfo->city}}</span><br>
+                                <div class="text-left row">
+                                    <div class="col-md-4 text-right p-0">コメント: </div>
+                                    <div class='col-md-8 text-left p-0'>{{$newInfo->comment}}</div>
                                 </div>
+                            </div>
                         </div>
                     </div>
                 </div>
