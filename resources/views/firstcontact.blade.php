@@ -57,18 +57,14 @@
             </div>
         </div>
 
-        <div class='row h-100'>
+        <div class='row TopNewInfo w-100 m-0'>
             @foreach ($info as $newInfo)
-                <div class="col-md-4 bg-secondary border shadow">
+                <div class="col-md-4 bg-secondary p-0 border shadow">
                     <?php
                         $infoTime=str_replace(" ","日",substr($newInfo->created_at,8));
                     ?>
                     <div class="m-1 bg-dark text-white shadow">
                         <span>投稿時間[{{$infoTime}}]</span><br>
-                        <div class="align-items-start">
-                            <span class="text-success" style="font-size:1vw;">{{$newInfo->tittle}}</span>
-                            <span style="font-size: 0.7vw">{{$newInfo->pref .'>'. $newInfo->city}}</span>
-                        </div>
                         <div class="text-nowrap row">
                             <span class="text-center col">
                                 @if ($newInfo->image !== "")
@@ -77,9 +73,13 @@
                                     <img src="{{ asset('img/dummy.png')}}" class="info-image">
                                 @endif
                             </span>
-                            <span class="text-left col">
-                                {{$newInfo->comment}}
-                            </span>
+                                <div class="align-items-start  col">
+                                        <span class="text-success h4">{{$newInfo->tittle}}</span><br>
+                                        <span style="font-size: h5">{{$newInfo->pref .'>'. $newInfo->city}}</span><br>
+                                    <span class="text-left">
+                                        投稿者のコメント : {{$newInfo->comment}}
+                                    </span>
+                                </div>
                         </div>
                     </div>
                 </div>

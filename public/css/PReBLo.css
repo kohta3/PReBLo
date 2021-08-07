@@ -112,6 +112,10 @@
 .firstContact-about2{
   font-size:3vw; 
   font-family: 'Kosugi Maru', cursive;
+
+  .TopNewInfo{
+    height:130px;
+  }
   position: absolute;
   bottom: 15%;
 }
@@ -260,6 +264,10 @@ form div{
     margin-left: auto;
  }
 
+ .TopNewInfo{
+   height:50%;
+ }
+
 }
 /* pc　768px以上 */
 @media screen and (min-width: 768px), print {
@@ -272,5 +280,8 @@ form div{
     height: 700px;
   }
   
+  .TopNewInfo{
+    height:100%;
+  }
 }
 
