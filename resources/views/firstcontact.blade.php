@@ -57,7 +57,7 @@
             </div>
         </div>
 
-        <div class='row TopNewInfo w-100 m-0'>
+        <div class='row w-100 m-0'>
             @foreach ($info as $newInfo)
                 <div class="col-md-4 bg-secondary p-0 border shadow">
                     <?php
@@ -66,7 +66,7 @@
                     <div class="m-1 bg-dark text-white shadow">
                         <span>投稿時間[{{$infoTime}}]</span><br>
                         <div class="text-nowrap row">
-                            <span class="text-center col-md-5" style="height: 10rem">
+                            <span class="text-center col-md-5 TopNewInfo p-0">
                                 @if ($newInfo->image !== "")
                                     <img src="{{$newInfo->image}}" class="TopImageInfo">
                                     @else
@@ -75,11 +75,8 @@
                             </span>
                             <div class="align-items-start  col-md-7">
                                 <span class="text-success h4">{{$newInfo->tittle}}</span><br>
-                                <span style="font-size: h5">{{$newInfo->pref .'>'. $newInfo->city}}</span>
-                                <div class="text-left row w-100">
-                                    <div class="text-right p-0">コメント: </div>
-                                    <div class='text-left p-0'>{{$newInfo->comment}}</div>
-                                </div>
+                                <span style="font-size: h5">{{$newInfo->pref .'>'. $newInfo->city}}</span><br>
+                                <span class="text-nowrap">コメント:{{$newInfo->comment}}</span>
                             </div>
                         </div>
                     </div>
