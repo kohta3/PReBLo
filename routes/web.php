@@ -19,7 +19,7 @@ Route::get('/', function () {
 })->middleware('guest');
 
 Route::resource('informations', 'InformationController')->middleware('auth');
-Auth::routes(['verify' => true]);
+    Auth::routes(['verify' => true]);
 
 Route::get('/home', 'HomeController@index')->middleware('auth')->name('home');
 

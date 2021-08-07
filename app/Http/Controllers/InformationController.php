@@ -132,7 +132,7 @@ class InformationController extends Controller
      */
     public function edit(Information $information)
     {
-        //
+        return view('infomations.edit',compact('information'));
     }
 
     /**
