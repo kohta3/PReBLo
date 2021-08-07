@@ -14,9 +14,7 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('firstcontact');
-})->middleware('guest');
+Route::get('/', 'firsrContactController@index')->middleware('guest');
 
 Route::resource('informations', 'InformationController')->middleware('auth');
     Auth::routes(['verify' => true]);

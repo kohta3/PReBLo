@@ -22,7 +22,7 @@ class InformationController extends Controller
      */
     public function index()
     {
-        $info=Information::all()->sortBy('crated_at')->take(6);
+        $info=Information::orderBy('created_at', 'asc')->take(6)->get();
         $topinfo=Information::all()->sortBy('id')->take(3);
         $prefs=Prefecture::all();
         $categories=Category::all();
