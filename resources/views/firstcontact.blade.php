@@ -77,8 +77,8 @@
                                 <span class="text-success h4">{{$newInfo->tittle}}</span><br>
                                 <span style="font-size: h5">{{$newInfo->pref .'>'. $newInfo->city}}</span>
                                 <div class="text-left row w-100">
-                                    <div class="col-md-4 text-right p-0">コメント: </div>
-                                    <div class='col-md-8 text-left p-0'>{{$newInfo->comment}}</div>
+                                    <div class="text-right p-0">コメント: </div>
+                                    <div class='text-left p-0'>{{$newInfo->comment}}</div>
                                 </div>
                             </div>
                         </div>
