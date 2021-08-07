@@ -57,6 +57,7 @@
                         <label for="password-confirm" class="col-md-5 col-form-label text-md-left"></label>
 
                         <div class="col-md-7">
+                            <label for="password" class="col-md-5 col-form-label text-md-left text-light">パスワードの確認</label>
                             <input id="password-confirm" type="password" class="form-control preblo-login-input" placeholder="パスワードの確認"  name="password_confirmation" required autocomplete="new-password">
                         </div>
                     </div>
