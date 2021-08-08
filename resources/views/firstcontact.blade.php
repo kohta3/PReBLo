@@ -40,6 +40,13 @@
                     </div>
                 </div>
 
+                {{-- <div class="mr-5 text-center"> --}}
+            <a href="{{ route('register') }}"><button class="btn btn-success btn-lg btn-block shadow text-white">新規登録</button></a>
+            <a href="{{ route('login') }}"><button class="btn btn-secondary btn-lg btn-block shadow text-white">ログイン</button></a>
+
+
+
+
                 <div class="carousel-item">
                     <img class="d-block w-85 img-fluid" src="{{asset('img/carucell02.jpg')}}" alt="d-block img-fluid">
                     <div class="card-img-overlay" style="font-size:4vw; font-family: 'Kosugi Maru', cursive;">
@@ -84,9 +91,7 @@
             @endforeach
         </div>
 
-        {{-- <div class="mr-5 text-center"> --}}
-            <a href="{{ route('register') }}"><button class="btn btn-success btn-lg btn-block shadow text-white">新規登録</button></a>
-            <a href="{{ route('login') }}"><button class="btn btn-secondary btn-lg btn-block shadow text-white">ログイン</button></a>
+        
         {{-- </div> --}}
 
         <div class="d-block d-sm-none text-center">
