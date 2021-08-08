@@ -22,12 +22,12 @@
     @section('content')
     @guest
         <div class="carousel slide carousel-fade" data-pause=false data-interval=3000  data-ride="carousel" style="width:100%">
-                <ol class="carousel-indicators">
-                    <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
-                    <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
-                    <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
-                </ol>
-                <div class="carousel-inner">
+            <ol class="carousel-indicators">
+                <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+                <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+                <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+            </ol>
+            <div class="carousel-inner">
                 <div class="carousel-item active">
                     <img class="d-block w-85 img-fluid" src="{{asset('img/carucell01.jpg')}}" alt="d-block img-fluid">
                     <div class="card-img-overlay mt-0">
@@ -39,13 +39,6 @@
                         
                     </div>
                 </div>
-
-                {{-- <div class="mr-5 text-center"> --}}
-            <a href="{{ route('register') }}"><button class="btn btn-success btn-lg btn-block shadow text-white">新規登録</button></a>
-            <a href="{{ route('login') }}"><button class="btn btn-secondary btn-lg btn-block shadow text-white">ログイン</button></a>
-
-
-
 
                 <div class="carousel-item">
                     <img class="d-block w-85 img-fluid" src="{{asset('img/carucell02.jpg')}}" alt="d-block img-fluid">
@@ -62,6 +55,13 @@
                     </div>
                 </div>
             </div>
+        </div>
+
+
+        {{-- <div class="mr-5 text-center"> --}}
+        <div class="row">
+            <a href="{{ route('register') }}"><button class="btn btn-success btn-lg btn-block shadow text-white">新規登録</button></a>
+            <a href="{{ route('login') }}"><button class="btn btn-secondary btn-lg btn-block shadow text-white">ログイン</button></a>
         </div>
 
         <div class='row w-100 m-0'>
@@ -91,7 +91,7 @@
             @endforeach
         </div>
 
-        
+     
         {{-- </div> --}}
 
         <div class="d-block d-sm-none text-center">
