@@ -109,7 +109,7 @@
         <div class="row mr-2">
           <p class="text-light col-md-12 ml-1 mt-2 h3" ><img src="/img/tourch.png" class="rounded-circle bg-light" alt="newinfo" style="width: 5%">新規投稿一覧</p>
           @foreach ($info as $information)         
-            <p class="col-md-4 text-left text-light  border" style="height: 300px"> 
+            <p class="col-md-4 text-left text-light rounded border border-primary" style="height: 300px"> 
                 {{$information->pref.'>'.$information->city}}<br>
                 <a  class='h3' href="{{route('informations.show', $information)}}">{{$information->tittle}}</a><br>
                 {{'ひとこと:'.$information->comment}}<br>
@@ -137,7 +137,7 @@
         <?php $i=0;?>
         @foreach ($topinfo as $topinfor)
         <?php $i=$i+1;?>
-        <div class="col-md-12 mb-3 border border-primary shadow text-light top3">
+        <div class="col-md-12 mb-3 border border-primary shadow text-light top3 rounded">
           <div class="w-100">
             <span class="h1">
               {{$i.'位'}}  

@@ -31,12 +31,10 @@
                 <div class="carousel-item active">
                     <img class="d-block w-85 img-fluid" src="{{asset('img/carucell01.jpg')}}" alt="d-block img-fluid">
                     <div class="card-img-overlay mt-0">
-                        <p class=" firstContact_font_japanese" >
+                        <p class=" firstContact_font_japanese" style="background-image: url('public/img/taxtback.png')" >
                             <span class='text-shadow-white m-0'>投稿型旅行サイト!!</span><br>
                         </p>
-                        
                             <span class="firstContact_font text-shadow-white" >PReBLo<br>&nbsp; Place<br>&nbsp;&nbsp; Recomend<br>&nbsp;&nbsp;&nbsp; By<br>&nbsp;&nbsp;&nbsp;&nbsp; Local</span>
-                        
                     </div>
                 </div>
 
@@ -59,14 +57,14 @@
 
 
         {{-- <div class="mr-5 text-center"> --}}
-        <div class="row">
-            <a href="{{ route('register') }}"><button class="btn btn-success btn-lg btn-block shadow text-white">新規登録</button></a>
-            <a href="{{ route('login') }}"><button class="btn btn-secondary btn-lg btn-block shadow text-white">ログイン</button></a>
+        <div class="text-center" style="margin: 0 auto">
+            <a href="{{ route('register') }}"><button class="btn btn-success col btn-lg btn-block shadow text-white">新規登録</button></a>
+            <a href="{{ route('login') }}"><button class="btn btn-secondary col btn-lg btn-block shadow text-white">ログイン</button></a>
         </div>
 
         <div class='row w-100 m-0'>
             @foreach ($info as $newInfo)
-                <div class="col-md-4 bg-secondary p-0 border shadow">
+                <div class="col-md-4 bg-secondary p-0 shadow">
                     <?php
                         $infoTime=str_replace(" ","日",substr($newInfo->created_at,8));
                     ?>
