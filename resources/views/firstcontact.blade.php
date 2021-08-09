@@ -29,12 +29,12 @@
             </ol>
             <div class="carousel-inner">
                 <div class="carousel-item active">
-                    <img class="d-block w-85 img-fluid" src="{{asset('img/carucell01.jpg')}}" alt="d-block img-fluid">
-                    <div class="card-img-overlay mt-0">
-                        <p class=" firstContact_font_japanese" style="background-image: url('public/img/taxtback.png')" >
-                            <span class='text-shadow-white m-0'>投稿型旅行サイト!!</span><br>
+                    <img class="d-block w-85 img-fluid" src="{{asset('img/carucell01.png')}}" alt="d-block img-fluid">
+                    <div class="card-img-overlay mt-0 pl-0">
+                        <p class=" firstContact_font_japanese">
+                            <span class='fastcontactinfo m-0  backimage'>&nbsp;投稿型旅行サイト!!</span><br>
                         </p>
-                            <span class="firstContact_font text-shadow-white" >PReBLo<br>&nbsp; Place<br>&nbsp;&nbsp; Recomend<br>&nbsp;&nbsp;&nbsp; By<br>&nbsp;&nbsp;&nbsp;&nbsp; Local</span>
+                            <span class="firstContact_font fastcontactinfo" >PReBLo<br>&nbsp; Place<br>&nbsp;&nbsp; Recomend<br>&nbsp;&nbsp;&nbsp; By<br>&nbsp;&nbsp;&nbsp;&nbsp; Local</span>
                     </div>
                 </div>
 
@@ -88,7 +88,7 @@
                 </div>
             @endforeach
         </div>
-
+        
      
         {{-- </div> --}}
 
