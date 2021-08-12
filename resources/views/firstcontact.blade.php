@@ -2,8 +2,7 @@
 <html lang="ja">
 <head prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb# website: http://ogp.me/ns/website#">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <meta name="name"  content="投稿型旅行サイト!!PReBLo!">    
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">    
     <meta property="og:url" content=" www.preblo.site" />
     <meta property="og:type" content="website" />
     <meta property="og:title" content="投稿型旅行サイト!!PReBLo" />
