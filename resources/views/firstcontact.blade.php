@@ -7,7 +7,7 @@
     <title>PReBLo</title>
     <meta name="name"  content="投稿型旅行サイト!!PReBLo!">
     <head prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb# website: http://ogp.me/ns/website#">
-    <meta property="og:url" content=" http://preblo.herokuapp.com" />
+    <meta property="og:url" content=" www.preblo.site" />
     <meta property="og:type" content="website" />
     <meta property="og:title" content="投稿型旅行サイト!!PReBLo" />
     <meta property="og:description" content=" 観光地、宿泊施設、飲食店をみんなに共有しよう！" />

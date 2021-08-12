@@ -1,7 +1,12 @@
 @extends('layouts.app')
 @section('content')
 <head>
-  
+  <meta property="og:url" content=" www.preblo.site" />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="PReBLo!!{{$information->tittle}}を共有" />
+  <meta property="og:description" content=" 観光地、宿泊施設、飲食店をみんなに共有しよう！" />
+  <meta property="og:site_name" content="PReBLo" />
+  <meta property="og:image" content="{{$information->image}}" />
 </head>
 
 <!-- フラッシュメッセージ -->
@@ -45,6 +50,7 @@
             <a href="{{ route('infolike', ['id' => $information->id]) }}" class="btn btn-info btn-sm">いいね<span class="badge">{{ $information->likes->count() }}</span></a>
           @endif
 
+          {{-- tweet --}}
           <a href="https://twitter.com/share?ref_src=twsrc%5Etfw" class="twitter-share-button" data-text="投稿型旅行サイトPReBLo!!" data-show-count="false">
             Tweet
           </a>
