@@ -12,7 +12,7 @@ class firsrContactController extends Controller
 {
     public function index () {
 
-        $info=Information::orderBy('created_at', 'asc')->take(3)->get();
+        $info=Information::orderBy('created_at', 'asc')->take(6)->get();
         return view('firstcontact',compact('info'));
     }
     

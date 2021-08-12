@@ -6,7 +6,7 @@
     <meta name="name"  content="投稿型旅行サイト!!PReBLo!">    
     <meta property="og:url" content=" www.preblo.site" />
     <meta property="og:type" content="website" />
-    <meta property="og:title" content="投稿型旅行サイト!!PReBLo" />
+    <meta property="og:title" content="観光地・ホテル・ご飯の投稿サイトPReBLo" />
     <meta property="og:description" content=" 観光地、宿泊施設、飲食店をみんなに共有しよう！" />
     <meta property="og:site_name" content="PReBLo" />
     <meta property="og:image" content={{asset('img/meta.png')}} />

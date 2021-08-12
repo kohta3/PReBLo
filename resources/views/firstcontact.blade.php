@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">    
     <meta property="og:url" content=" www.preblo.site" />
     <meta property="og:type" content="website" />
-    <meta property="og:title" content="投稿型旅行サイト!!PReBLo" />
+    <meta property="og:title" content="観光地・ホテル・ご飯の投稿サイトPReBLo" />
     <meta property="og:description" content=" 観光地、宿泊施設、飲食店をみんなに共有しよう！" />
     <meta property="og:site_name" content="PReBLo" />
     <meta property="og:image" content={{asset('img/meta.png')}} />
@@ -57,23 +57,24 @@
             <a href="{{ route('login') }}"><button class="btn btn-secondary col btn-lg btn-block shadow text-white">ログイン</button></a>
         </div>
 
-        <div class='row w-100 m-0'>
+        <div class='row w-100 m-0 h-100'>
             @foreach ($info as $newInfo)
-                <div class="col-md-4 bg-secondary p-0 shadow">
+                <div class="col-md-2 bg-secondary p-0 shadow">
                     <?php
                         $infoTime=str_replace(" ","日",substr($newInfo->created_at,8));
                     ?>
                     <div class="m-1 bg-dark text-white shadow">
-                        <span>投稿時間[{{$infoTime}}]</span><br>
-                        <div class="text-nowrap row">
-                            <span class="text-center col-md-5 TopNewInfo p-0">
-                                @if ($newInfo->image !== "")
-                                    <img src="{{$newInfo->image}}" class="TopImageInfo">
-                                    @else
-                                    <img src="{{ asset('img/dummy.png')}}" class="TopImageInfo">
-                                @endif
-                            </span>
+                        <span class="text-center col-md-5 TopNewInfo p-0">
+                            @if ($newInfo->image !== "")
+                                <img src="{{$newInfo->image}}" class=" TopImageInfo">
+                                @else
+                                <img src="{{ asset('img/dummy.png')}}" class="TopImageInfo">
+                            @endif
+                        </span>
+                        
+                        <div class="text-nowrap row firstInfo">
                             <div class="align-items-start  col-md-7">
+                                <p>投稿時間[{{$infoTime}}]</p>
                                 <span class="text-success h4">{{$newInfo->tittle}}</span><br>
                                 <span style="font-size: h5">{{$newInfo->pref .'>'. $newInfo->city}}</span><br>
                                 <span class="text-nowrap">コメント:{{$newInfo->comment}}</span>
