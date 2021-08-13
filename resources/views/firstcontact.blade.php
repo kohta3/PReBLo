@@ -57,7 +57,7 @@
             <a href="{{ route('login') }}"><button class="btn btn-secondary col btn-lg btn-block shadow text-white">ログイン</button></a>
         </div>
 
-        <div class='row w-100 m-0' style="height: 150px">
+        <div class='row w-100 m-0'>
             @foreach ($info as $newInfo)
                 <div class="col-md-2 bg-secondary p-0 shadow">
                     <?php
