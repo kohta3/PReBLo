@@ -105,24 +105,32 @@
   {{-- content new add & top3 --}}
   {{-- new take6 --}}
   <div class="info-content position-block" style="display:flex">
-    <div class="container"  >
+    <div class="container">
         <div class="row mr-2">
-          <p class="text-light col-md-12 ml-1 mt-2 h3" ><img src="/img/tourch.png" class="rounded-circle bg-light" alt="newinfo" style="width: 5%">新規投稿一覧</p>
-          @foreach ($info as $information)         
-            <p class="col-md-4 text-left text-light rounded border border-primary" style="height: 300px"> 
+          <p class="text-light ml-1 mt-2 h3" ><img src="/img/tourch.png" class="rounded-circle bg-light" alt="newinfo" style="width: 5%">新規投稿一覧</p>
+        </div>
+        <div class="row">  
+            @foreach ($info as $information)        
+            <?php
+              $infoTime=str_replace(" ","日",substr($information->created_at,8));
+              ?>
+            <div class="col-md-4 border border-primary" style="height: 170px">
+              <a class="text-center mx-auto" href="{{route('informations.show', $information)}}">
+                @if ($information->image !== "")
+                  <img src="{{$information->image}}" class="middleImageInfo1">
+                @else 
+                  <img src="{{ asset('img/dummy.png')}}" class="middleImageInfo1">
+                @endif
+              </a>
+              <p class="text-left text-light rounded firstInfo"> 
+                <span> {{$infoTime}}</span><br>
                 {{$information->pref.'>'.$information->city}}<br>
                 <a  class='h3' href="{{route('informations.show', $information)}}">{{$information->tittle}}</a><br>
                 {{'ひとこと:'.$information->comment}}<br>
-              <br>
-              <a class="text-center d-block mx-auto" href="{{route('informations.show', $information)}}">
-                @if ($information->image !== "")
-                  <img src="{{$information->image}}" class="info-image">
-                @else 
-                  <img src="{{ asset('img/dummy.png')}}" class="info-image">
-                @endif
-              </a>
-            </p>
-          @endforeach
+              </p>
+            </div>
+            @endforeach
+
         </div>
 
 
@@ -136,52 +144,52 @@
 
         <?php $i=0;?>
         @foreach ($topinfo as $topinfor)
-        <?php $i=$i+1;?>
-        <div class="col-md-12 mb-3 border border-primary shadow text-light top3 rounded">
-          <div class="w-100">
-            <span class="h1">
-              {{$i.'位'}}  
-            </span>
+          <?php $i=$i+1;?>
+          <div class="col-md-12 mb-3 border border-primary shadow text-light top3 rounded">
+            <div class="w-100">
+              <span class="h1">
+                {{$i.'位'}}  
+              </span>
 
-            <span class="text-nowrap h5">  
-              {{$topinfor->pref.'>'.$topinfor->city}}
-            </span>
-          </div>
-              
-          <div class='align-items-center h4' >  
-            <div class="container">
-              <div class="row">  
-                <div class="col-md-4 m-0 text-center">  
-                  <a href="{{route('informations.show', $topinfor)}}" class="align-items-center">    
-                    @if ($topinfor->image !== "")
-                        <img src="{{$topinfor->image}}" class="info-image">
-                        @else
-                        <img src="{{ asset('img/dummy.png')}}" class="info-image">
-                    @endif
-                  </a>
-                </div>
+              <span class="text-nowrap h5">  
+                {{$topinfor->pref.'>'.$topinfor->city}}
+              </span>
+            </div>
+                
+            <div class='align-items-center h4' >  
+              <div class="container">
+                <div class="row">  
+                  <div class="col-md-5 m-0 text-center">  
+                    <a href="{{route('informations.show', $topinfor)}}" class="align-items-center">    
+                      @if ($topinfor->image !== "")
+                          <img src="{{$topinfor->image}}" class="middleImageInfo2">
+                          @else
+                          <img src="{{ asset('img/dummy.png')}}" class="middleImageInfo2">
+                      @endif
+                    </a>
+                  </div>
 
-                <div class="col-md-8">
-                  <p><a class="mt-3 h1" href="{{route('informations.show', $topinfor)}}">{{$topinfor->tittle}}</a></p>
-                  <a class="h6" href="{{$topinfor->URL}}">サイトを開く</a>
-                  <p class="h5 mt-3 shadow-lg">{{'ひとこと:'.$topinfor->comment}}</p>
+                  <div class="col-md-7">
+                    <p><a class="mt-3 h1" href="{{route('informations.show', $topinfor)}}">{{$topinfor->tittle}}</a></p>
+                    <a class="h6" href="{{$topinfor->URL}}">サイトを開く</a>
+                    <p class="h5 mt-3 shadow-lg">{{'ひとこと:'.$topinfor->comment}}</p>
 
-                  <?php
-                      if($information->ParkingCar===0)$judgeCar='駐車場有り';
-                    else$judgeCar='駐車場無し';
-                      if($information->ParkingBicycles===0)$judgeBycycle='駐輪場有り';
-                    else$judgeBycycle='駐輪場無し';
-                  ?>
-                    
-                  <div class="text-nowrap h5 mt-3"> 
-                    <span style="height: 10%"><img src="/img/carport.png" class="bikeorcar-img">{{$judgeCar}}</span>
-                    <span><img src="/img/bike.png" class="bikeorcar-img">{{$judgeBycycle}}</span>
+                    <?php
+                        if($information->ParkingCar===0)$judgeCar='駐車場有り';
+                      else$judgeCar='駐車場無し';
+                        if($information->ParkingBicycles===0)$judgeBycycle='駐輪場有り';
+                      else$judgeBycycle='駐輪場無し';
+                    ?>
+                      
+                    <div class="text-nowrap h5 mt-3"> 
+                      <span style="height: 10%"><img src="/img/carport.png" class="bikeorcar-img">{{$judgeCar}}</span>
+                      <span><img src="/img/bike.png" class="bikeorcar-img">{{$judgeBycycle}}</span>
+                    </div>
                   </div>
                 </div>
               </div>
             </div>
           </div>
-        </div>
         @endforeach  
     </div>    
   </div>

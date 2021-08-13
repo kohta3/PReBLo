@@ -57,7 +57,7 @@
             <a href="{{ route('login') }}"><button class="btn btn-secondary col btn-lg btn-block shadow text-white">ログイン</button></a>
         </div>
 
-        <div class='row w-100 m-0 h-100'>
+        <div class='row w-100 m-0' style="height: 150px">
             @foreach ($info as $newInfo)
                 <div class="col-md-2 bg-secondary p-0 shadow">
                     <?php
@@ -66,7 +66,7 @@
                     <div class="m-1 bg-dark text-white shadow">
                         <span class="text-center col-md-5 TopNewInfo p-0">
                             @if ($newInfo->image !== "")
-                                <img src="{{$newInfo->image}}" class=" TopImageInfo">
+                                <img src="{{$newInfo->image}}" class="TopImageInfo">
                                 @else
                                 <img src="{{ asset('img/dummy.png')}}" class="TopImageInfo">
                             @endif
