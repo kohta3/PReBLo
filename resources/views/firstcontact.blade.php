@@ -24,27 +24,14 @@
             </ol>
             <div class="carousel-inner">
                 <div class="carousel-item active">
-                    <img class="d-block w-85 img-fluid" src="{{asset('img/carucell01.png')}}" alt="d-block img-fluid">
+                    <img class="d-block w-85 img-fluid" src="{{asset('img/carucell01.jpg')}}" alt="d-block img-fluid">
                     <div class="card-img-overlay mt-0 pl-0">
-                        <p class=" firstContact_font_japanese">
-                            <span class='fastcontactinfo m-0  backimage'>&nbsp;投稿型旅行サイト!!</span><br>
-                        </p>
-                            <span class="firstContact_font fastcontactinfo" >PReBLo<br>&nbsp; Place<br>&nbsp;&nbsp; Recomend<br>&nbsp;&nbsp;&nbsp; By<br>&nbsp;&nbsp;&nbsp;&nbsp; Local</span>
                     </div>
                 </div>
 
                 <div class="carousel-item">
                     <img class="d-block w-85 img-fluid" src="{{asset('img/carucell02.jpg')}}" alt="d-block img-fluid">
                     <div class="card-img-overlay" style="font-size:4vw; font-family: 'Kosugi Maru', cursive;">
-                        <span  class="text-shadow-blue" >-観光地<br>&nbsp;-宿泊施設<br>&nbsp;&nbsp;-飲食店をみんなに共有しよう！</span>
-                    </div>
-                </div>
-
-                <div class="carousel-item">
-                    <img class="d-block w-85 img-fluid" src="{{asset('img/carucell03.jpg')}}" alt="d-block img-fluid">
-                    <div class="card-img-overlay">
-                        <span class="text-light firstContact-about">投稿内容に自動で飲食店、宿泊施設が付く!</span>
-                        <span class="text-light firstContact-about2">投稿内容に自動で宿泊施設が付く!</span>
                     </div>
                 </div>
             </div>
