@@ -40,7 +40,7 @@
         {{-- <div class="mr-5 text-center"> --}}
         <div class="text-center" style="margin: 0 auto">
             <a href="{{ route('register') }}"><button class="btn btn-success col btn-lg btn-block shadow text-white">新規登録</button></a>
-            <a href="{{ route('login') }}"><button class="btn btn-secondary col btn-lg btn-block shadow text-white">ログイン</button></a>
+            <a href="{{ route('login') }}"><button class="btn btn-warning col btn-lg btn-block shadow text-white">ログイン</button></a>
         </div>
 
         <div class='row w-100 m-0'>
