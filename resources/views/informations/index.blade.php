@@ -114,7 +114,7 @@
             <?php
               $infoTime=str_replace(" ","日",substr($information->created_at,8));
               ?>
-            <div class="col-md-4 border border-primary" style="height: 170px">
+            <div class="col-md-4" style="height: 170px">
               <a class="text-center mx-auto" href="{{route('informations.show', $information)}}">
                 @if ($information->image !== "")
                   <img src="{{$information->image}}" class="middleImageInfo1">
@@ -145,7 +145,7 @@
         <?php $i=0;?>
         @foreach ($topinfo as $topinfor)
           <?php $i=$i+1;?>
-          <div class="col-md-12 mb-3 border border-primary shadow text-light top3 rounded">
+          <div class="col-md-12 mb-3 shadow text-light top3 rounded">
             <div class="w-100">
               <span class="h1">
                 {{$i.'位'}}  
