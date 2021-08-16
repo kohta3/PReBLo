@@ -13,7 +13,7 @@
         <ul class="navbar-nav m-0 w-100 h-100  align-middle">
             <!-- Authentication Links -->
             @guest
-            <span style="position: absolute; right:0;">
+            <span class='d-flex flex-row-reverse mb-3' style="position: absolute; right:0;">
                 <li class="nav-item mr-5">
                     <a class="nav-link" href="{{ route('register') }}"><button class="btn btn-info  shadow text-white">新規登録</button></a>
                 </li>
