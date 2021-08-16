@@ -114,7 +114,7 @@
             <?php
               $infoTime=str_replace(" ","日",substr($information->created_at,8));
               ?>
-            <div class="col-md-4 m-1" style="height: 170px">
+            <div class="col-md-4 " style="height: 170px">
               <a class="text-center mx-auto" href="{{route('informations.show', $information)}}">
                 @if ($information->image !== "")
                   <img src="{{$information->image}}" class="middleImageInfo1">
