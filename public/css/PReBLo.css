@@ -290,5 +290,9 @@ form div{
   .TopNewInfo{
     height:5rem;
   }
+
+  .header-navbar{
+    text-align: right;
+  }
 }
 

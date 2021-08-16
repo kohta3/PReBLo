@@ -8,9 +8,9 @@
     </button>   
     
     
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <div class="collapse navbar-collapse m-0 " style="height: 4.5vw" id="navbarSupportedContent">
         <!-- Right Side Of Navbar -->
-        <ul class="navbar-nav ml-auto mr-5 mt-2">
+        <ul class="navbar-nav m-0 w-100 h-100  align-middle">
             <!-- Authentication Links -->
             @guest
             <li class="nav-item mr-5">
@@ -21,34 +21,45 @@
             </li>
             <hr>
             @else
-            <li class="nav-item mr-5">
-                <a class="py-3" href="/informations" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
-                    トップページ
-                </a>
-            </li>
 
-            <li class="nav-item mr-5">
-                <a class="py-3" href="/informations" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
-                    検索
-                </a>
-            </li>
+            <ul class="navbar-nav m-0 w-100 h5">
+                <li class="nav-item mx-3 w-100 h-100 d-flex align-items-center ">
+                    <a href="/informations" class="w-100 text-center">
+                        トップページ
+                    </a>
+                </li>
 
-            <li class="nav-item mr-5">
-                <a class="py-3" href="/informations" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
-                    アカウント
-                </a>
-            </li>
+                <li class="nav-item mx-3 w-100 h-100 d-flex align-items-center ">
+                    <a href="/informations" class="w-100 text-center" >
+                        検  索
+                    </a>
+                </li>
 
-            <li class="nav-item mr-5">
-                
-                <a href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
-                    ログアウト
-                </a>
+                <li class="nav-item mx-3 w-100 h-100 d-flex align-items-center ">
+                    <a href="/informations" class="w-100 text-center" >
+                        お気に入り
+                    </a>
+                </li>
 
-                <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
-                    @csrf
-                </form>
-            </li>
+                <li class="nav-item mx-3 w-100 h-100 d-flex align-items-center ">
+                    <a href="/informations" class="w-100 text-center" >
+                        アカウント
+                    </a>
+                </li>
+            </ul>
+
+
+            <div class="nav-item mr-3 header-navbar w-25 h-100">    
+                <span class="bg-light bg-gradient h-100 rounded ">
+                        <a href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
+                            ログアウト
+                        </a>
+
+                        <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                            @csrf
+                        </form>
+                </span>
+            </div>
             @endguest
         </ul>
     </div>
