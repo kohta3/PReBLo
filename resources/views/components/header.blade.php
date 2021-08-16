@@ -28,6 +28,18 @@
             </li>
 
             <li class="nav-item mr-5">
+                <a class="py-3" href="/informations" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
+                    検索
+                </a>
+            </li>
+
+            <li class="nav-item mr-5">
+                <a class="py-3" href="/informations" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
+                    アカウント
+                </a>
+            </li>
+
+            <li class="nav-item mr-5">
                 
                 <a href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
                     ログアウト
