@@ -107,7 +107,7 @@
   <div class="info-content position-block" style="display:flex">
     <div class="container">
         <div class="row mr-2">
-          <p class="text-light ml-1 mt-2 h3" ><img src="/img/tourch.png" class="rounded-circle bg-light" alt="newinfo" style="width: 5%">新規投稿一覧</p>
+          <p class="text-light col-md-12 ml-1 mt-5 pt-5 h3" ><img src="/img/tourch.png" class="rounded-circle bg-light" alt="newinfo" style="width: 5%">新規投稿一覧</p>
         </div>
         <div class="row">  
             @foreach ($info as $information)        
@@ -138,13 +138,13 @@
           {{-- top3 --}}
       <div class="row">
         <div class="col-md-12">
-          <p class="text-light col-md-12 ml-1 mt-5 h3"><img src="/img/rank.png" class="rounded-circle bg-light" alt="newinfo" style="width: 5%">人気ランキング</p>
+          <p class="text-light col-md-12 ml-1 mt-5 pt-5 h3"><img src="/img/rank.png" class="rounded-circle bg-light" alt="newinfo" style="width: 5%">人気ランキング</p>
         </div>
 
         <?php $i=0;?>
         @foreach ($topinfo as $topinfor)
           <?php $i=$i+1;?>
-          <div class="col-md-12 mb-3 shadow text-light top3 rounded">
+          <div class="col-md-12 mb-3 shadow text-light top3 rounded bg-dark">
             <div class="w-100">
               <span class="h1">
                 {{$i.'位'}}  
