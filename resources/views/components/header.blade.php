@@ -13,12 +13,14 @@
         <ul class="navbar-nav m-0 w-100 h-100  align-middle">
             <!-- Authentication Links -->
             @guest
-            <li class="nav-item mr-5">
-                <a class="nav-link" href="{{ route('register') }}"><button class="btn btn-info  shadow text-white">新規登録</button></a>
-            </li>
-            <li class="nav-item mr-5">
-                <a class="nav-link" href="{{ route('login') }}"><button class="btn btn-info  shadow text-white">ログイン</button></a>
-            </li>
+            <span style="position: absolute; right:0;">
+                <li class="nav-item mr-5">
+                    <a class="nav-link" href="{{ route('register') }}"><button class="btn btn-info  shadow text-white">新規登録</button></a>
+                </li>
+                <li class="nav-item mr-5">
+                    <a class="nav-link" href="{{ route('login') }}"><button class="btn btn-info  shadow text-white">ログイン</button></a>
+                </li>
+            </span>
             <hr>
             @else
 
