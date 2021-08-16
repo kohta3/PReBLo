@@ -117,9 +117,9 @@
             <div class="col-md-4 mt-3" style="height: 170px">
               <a class="text-center mx-auto" href="{{route('informations.show', $information)}}">
                 @if ($information->image !== "")
-                  <img src="{{$information->image}}" class="middleImageInfo1">
+                  <img src="{{$information->image}}" class="middleImageInfo1 rounded-pill">
                 @else 
-                  <img src="{{ asset('img/dummy.png')}}" class="middleImageInfo1">
+                  <img src="{{ asset('img/dummy.png')}}" class="middleImageInfo1 rounded-pill">
                 @endif
               </a>
               <p class="text-left text-light rounded firstInfo"> 
@@ -138,7 +138,7 @@
           {{-- top3 --}}
       <div class="row">
         <div class="col-md-12">
-          <p class="text-light col-md-12 ml-1 mt-2 h3"><img src="/img/rank.png" class="rounded-circle bg-light" alt="newinfo" style="width: 5%">人気ランキング</p>
+          <p class="text-light col-md-12 ml-1 mt-5 h3"><img src="/img/rank.png" class="rounded-circle bg-light" alt="newinfo" style="width: 5%">人気ランキング</p>
         </div>
 
         <?php $i=0;?>
