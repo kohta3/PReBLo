@@ -114,12 +114,12 @@
             <?php
               $infoTime=str_replace(" ","日",substr($information->created_at,8));
               ?>
-            <div class="col-md-4 mt-3" style="height: 170px">
+            <div class="col-md-4 mt-3 " style="height: 170px">
               <a class="text-center mx-auto" href="{{route('informations.show', $information)}}">
                 @if ($information->image !== "")
-                  <img src="{{$information->image}}" class="middleImageInfo1 rounded-pill">
+                  <img src="{{$information->image}}" class="middleImageInfo1 rounded">
                 @else 
-                  <img src="{{ asset('img/dummy.png')}}" class="middleImageInfo1 rounded-pill">
+                  <img src="{{ asset('img/dummy.png')}}" class="middleImageInfo1 rounded">
                 @endif
               </a>
               <p class="text-left text-light rounded firstInfo"> 
