@@ -122,7 +122,7 @@
                   <img src="{{ asset('img/dummy.png')}}" class="middleImageInfo1 rounded">
                 @endif
               </a>
-              <p class="text-left text-light rounded firstInfo"> 
+              <p class="text-left text-light rounded firstInfo ml-2"> 
                 <span> {{$infoTime}}</span><br>
                 {{$information->pref.'>'.$information->city}}<br>
                 <a  class='h3' href="{{route('informations.show', $information)}}">{{$information->tittle}}</a><br>
