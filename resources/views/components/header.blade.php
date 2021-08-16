@@ -21,9 +21,11 @@
             </li>
             <hr>
             @else
-            {{-- <li class="nav-item mr-5">
-                <a class="py-3" href="/informations">home</a>
-            </li> --}}
+            <li class="nav-item mr-5">
+                <a class="py-3" href="/informations" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
+                    トップページ
+                </a>
+            </li>
 
             <li class="nav-item mr-5">
                 
