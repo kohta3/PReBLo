@@ -17,9 +17,10 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', 'firsrContactController@index')->middleware('guest');
 
 Route::resource('informations', 'InformationController')->middleware('auth');
-    Auth::routes(['verify' => true]);
+Auth::routes(['verify' => true]);
 
 Route::get('/home', 'HomeController@index')->middleware('auth')->name('home');
+Route::resource('search', 'SearchController')->middleware('auth');
 
 
 

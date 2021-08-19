@@ -32,7 +32,7 @@
                 </li>
 
                 <li class="nav-item mx-3 w-100 h-100 d-flex align-items-center ">
-                    <a href="/informations" class="w-100 text-center" >
+                    <a href="/Search" class="w-100 text-center" >
                         検  索
                     </a>
                 </li>
