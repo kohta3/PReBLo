@@ -39,9 +39,9 @@
         <div class="h-50 border">
           <div class="m-3">
             <?php
-              if($information->ParkingCar==0)$judgeCar='駐車場有り';
+              if($information->ParkingCar!=0)$judgeCar='駐車場有り';
               else$judgeCar='駐車場無し';
-              if($information->ParkingBicycles==0)$judgeBycycle='駐輪場有り';
+              if($information->ParkingBicycles!=0)$judgeBycycle='駐輪場有り';
               else$judgeBycycle='駐輪場無し';
             ?>
             <p class="h2">{{$information->tittle}}</p>
