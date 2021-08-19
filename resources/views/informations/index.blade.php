@@ -174,9 +174,9 @@
                     <p class="h5 mt-3 shadow-lg">{{'ひとこと:'.$topinfor->comment}}</p>
 
                     <?php
-                        if($information->ParkingCar===0)$judgeCar='駐車場有り';
+                        if($topinfor->ParkingCar==0)$judgeCar='駐車場有り';
                       else$judgeCar='駐車場無し';
-                        if($information->ParkingBicycles===0)$judgeBycycle='駐輪場有り';
+                        if($topinfor->ParkingBicycles==0)$judgeBycycle='駐輪場有り';
                       else$judgeBycycle='駐輪場無し';
                     ?>
                       
