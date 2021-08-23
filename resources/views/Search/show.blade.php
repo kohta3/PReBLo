@@ -28,7 +28,7 @@
                         @endif
                     </a>
                 </div>
-                <div class="col-md-7 my-3">
+                <div class="col-md-7 my-3 h-100">
                     <h5>{{$info->pref.">".$info->city}}</h5>
                     <h1>{{$info->tittle}}</h1>
                     <p>
