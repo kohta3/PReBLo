@@ -4,6 +4,15 @@
   background-color: #ffffff;
 }
 
+.overflow{
+  width: 10%;
+  min-width: 100px;
+  height: 20rem;
+  box-shadow:10px 10px rgba(32, 78, 105, 0.568),5px 5px  rgba(32, 78, 105, 0.404);
+  text-align: center;
+  overflow-y: scroll;
+}
+
 .size img {
     width: 25%;
     height: auto;  
@@ -252,6 +261,25 @@ form div{
 .backimage{
   background-image: url("image/taxtback.png");
   background-size: 100% 100%;
+}
+
+  /* Search_info */
+.search-circle{
+  border-radius: 50px;
+  transition: box-shadow 2s ease-out, transform 2s ease-out;
+  background-color: rgba(28, 95, 134, 0.664);
+}
+
+.search-circle:hover{
+  box-shadow: 0 15px 10px 5px rgba(0, 0, 0, 0.87);
+  transform: translateY(-10px);
+}
+
+.middleImageInfo3{
+  border-radius: 50px;
+  width: 100%; 
+  max-height: 100%;
+  object-fit: cover;
 }
 
 @media screen and (max-width: 768px){

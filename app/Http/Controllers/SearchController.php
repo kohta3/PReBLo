@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Search;
 use App\Information;
 use App\Category;
+use App\Prefecture;
 use Illuminate\Http\Request;
 
 class SearchController extends Controller
@@ -18,7 +19,8 @@ class SearchController extends Controller
     {
         $info=Information::all();
         $category=Category::all();
-        return view('Search.index' , compact('info','category'));
+        $pref=Prefecture::all();
+        return view('Search.index' , compact('info','category','pref'));
     }
 
     /**
@@ -39,7 +41,9 @@ class SearchController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        global $search_info;
+        $search_info=$request->input('pref');
+        return redirect()->route('Search.show', ['Search' => $search_info]);
     }
 
     /**
@@ -48,9 +52,11 @@ class SearchController extends Controller
      * @param  \App\Search  $search
      * @return \Illuminate\Http\Response
      */
-    public function show(Search $search)
+    public function show(Request $request , Information $information , Prefecture $prefecture , $search_info)
     {
-        //
+        $sort_pref=Prefecture::find($search_info);
+        $search_view=Information::where('pref', $sort_pref->Pref)->paginate(15);
+        return(view('Search.show',compact('search_view','sort_pref')));
     }
 
     /**

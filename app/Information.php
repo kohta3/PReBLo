@@ -11,6 +11,12 @@ class Information extends Model
     {
         return $this->belongsTo('App\Category');
     }
+    
+    public function prefcture()
+    {
+        return $this->belongsTo('App\Prefecture');
+    }
+
     public function user() {
         return $this->belongsTo('App\User');
     }

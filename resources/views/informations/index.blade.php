@@ -51,7 +51,7 @@
           {{-- TEL --}}
           <div>
             <label class="ml-3 bg-info rounded-pill" for="TEL">TEL</label>
-            <input type="tel" pattern="[0-9]{11}" placeholder="090-1234-5678" name="TEL" id="TEL" style="width: 300px" required>
+            <input type="tel" placeholder="090-1234-5678" name="TEL" id="TEL" style="width: 300px" required>
           </div>
           {{-- parkingCar --}}
           <div>
