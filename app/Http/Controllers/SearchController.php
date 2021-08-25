@@ -18,9 +18,10 @@ class SearchController extends Controller
     public function index()
     {
         $info=Information::all();
-        $category=Category::all();
+        $category=Category::pluck('maintype')->unique();
+        $subcategorise=Category::all();
         $pref=Prefecture::all();
-        return view('Search.index' , compact('info','category','pref'));
+        return view('Search.index' , compact('info','category','pref','subcategorise'));
     }
 
     /**

@@ -18,9 +18,9 @@
         @foreach ($search_view as $info)
         <div class="text-light">
             <h3 class="row m-2">{{$sort_pref->Pref."の検索結果"}}</h3>
-            <div class="row search-circle mx-5 my-3 " style="height: 15rem">
+            <div class="row search-circle mx-5 my-3" style="height: 15rem">
                 <div class="col-md-5 h-100 p-0">
-                    <a href="{{route('Search.show', $info)}}" class="align-items-center">    
+                    <a href="{{route('informations.show', $info)}}" class="align-items-center">    
                         @if ($info->image !== "")
                             <img src="{{$info->image}}" class="middleImageInfo3">
                             @else
@@ -28,7 +28,7 @@
                         @endif
                     </a>
                 </div>
-                <div class="col-md-7 my-3 h-100">
+                <div class="col-md-7 my-3 h-100 searchshow-viewing">
                     <h5>{{$info->pref.">".$info->city}}</h5>
                     <h1>{{$info->tittle}}</h1>
                     <p>
