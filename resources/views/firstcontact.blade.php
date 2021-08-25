@@ -43,6 +43,11 @@
             <a href="{{ route('login') }}"><button class="btn btn-info col btn-lg btn-block shadow text-white">ログイン</button></a>
         </div>
 
+        {{--PReBLoに関して--}}
+        <div class="row w-100 m-3 text-light">
+            <h1>PReBLoに関して</h1>
+        </div>
+
         <div class='row w-100 m-0'>
             @foreach ($info as $newInfo)
                 <div class="col-md-2 bg-secondary p-0 shadow">

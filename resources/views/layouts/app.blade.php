@@ -11,7 +11,7 @@
         <!-- CSRF Token -->
         <meta name="csrf-token" content="{{ csrf_token() }}">
 
-        <title>観光の投稿サイトPReBLo!</title>
+        <title>旅の投稿サイトPReBLo!(旅行・ホテル・レストラン etc...)</title>
 
         <!-- Scripts -->
         <script src="{{ asset('js/app.js') }}" defer></script>
