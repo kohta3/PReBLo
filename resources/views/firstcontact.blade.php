@@ -51,10 +51,10 @@
                     <div class="col-md-5 p-0 text-center" style="height: 15rem">
                         <video src="{{asset('img/view1.mp4')}}" class="middleImageInfo1" autoplay playinline muted loop></video>
                     </div>
-                    <div class="col-md-7 w-100 text-center">
-                            <p class="ml-3" style="font-size: 1.5vw">PReBLoでは、旅行やお出かけした思い出を投稿することができます。</p>
-                            <p class="ml-3" style="font-size: 1.5vw">まずは登録！上のボタンから登録可能！</p>
-                            <p class="ml-3" style="font-size: 1.5vw">アカウントをお持ちの場合は、ログインを選択</p>
+                    <div class="col-md-7 w-100 text-center" style="font-size: 2.5vw">
+                            <p class="ml-3">PReBLoでは、旅行やお出かけした思い出を投稿することができます。</p>
+                            <p class="ml-3">まずは登録！上のボタンから登録可能！</p>
+                            <p class="ml-3">アカウントをお持ちの場合は、ログインを選択</p>
                     </div>
                 </div>
             </details>
