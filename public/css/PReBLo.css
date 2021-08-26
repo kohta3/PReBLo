@@ -51,6 +51,16 @@
     padding: 1.25rem;
   }
 
+.firstcontact-showinfo{
+  visibility: collapse;
+}
+
+.firstcontact-showinfo:hover{
+  width: 100%;
+  visibility: visible;
+  display: block;
+}
+
 .cover-font{
     font-size: 70%;
     font-weight: bold; /*装飾*/
