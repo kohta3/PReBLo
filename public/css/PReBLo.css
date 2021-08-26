@@ -127,6 +127,10 @@
     object-fit: cover;
 }
 
+details {
+  height: 100%;
+  transition: .5s;
+}
 
 .middleImageInfo1{
   filter: brightness(50%);

@@ -46,20 +46,20 @@
         {{--PReBLoに関して--}}
         <div class="w-100 text-light my-3">
             <details class="w-100 border-top shadow">
-                <summary class="w-80" style="font-size: 200%">1.PReBLoを使う</summary><br>
+                <summary class="w-80" style="font-size: 190%">1.PReBLoを使う</summary><br>
                 <div class="row w-100 mx-2">
                     <div class="col-md-5 p-0 text-center" style="height: 15rem">
                         <video src="{{asset('img/view1.mp4')}}" class="middleImageInfo1" autoplay playinline muted loop></video>
                     </div>
-                    <div class="col-md-7 w-100 text-center" style="font-size: 2.5vw">
-                            <p class="ml-3">PReBLoでは、旅行やお出かけした思い出を投稿することができます。</p>
-                            <p class="ml-3">まずは登録！上のボタンから登録可能！</p>
-                            <p class="ml-3">アカウントをお持ちの場合は、ログインを選択</p>
+                    <div class="col-md-7 w-100 text-center">
+                            <p class="ml-3"  style="font-size: 2.5vw">PReBLoでは、旅行やお出かけした思い出を投稿することができます。</p>
+                            <p class="ml-3"  style="font-size: 2.5vw">まずは登録！上のボタンから登録可能！</p>
+                            <p class="ml-3"  style="font-size: 2.5vw">アカウントをお持ちの場合は、ログインを選択</p>
                     </div>
                 </div>
             </details>
             <details class="w-100 border-top shadow">
-                <summary class="w-80" style="font-size: 200%">2.旅行の記録を投稿</summary><br>
+                <summary class="w-80" style="font-size: 190%">2.旅行の記録を投稿</summary><br>
                 <div class="row w-100 mx-2">
                     <div class="col-md-5 p-0 text-center" style="height: 15rem">
                         <video src="{{asset('img/view1.mp4')}}" class="middleImageInfo1" autoplay playinline muted loop></video>
@@ -72,7 +72,7 @@
                 </div>
             </details>
             <details class="w-100 border-top border-bottom shadow">
-                <summary class="w-80" style="font-size: 200%">3.観光地・ホテル・ご飯を探す</summary><br>
+                <summary class="w-80" style="font-size: 190%">3.観光地・ホテル・ご飯を探す</summary><br>
                 <div class="row w-100 mx-2">
                     <div class="col-md-5 p-0 text-center" style="height: 15rem">
                         <video src="{{asset('img/view1.mp4')}}" class="middleImageInfo1" autoplay playinline muted loop></video>
