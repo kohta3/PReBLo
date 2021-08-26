@@ -46,7 +46,7 @@
         {{--PReBLoに関して--}}
         <div class="w-100 text-light my-3">
             <details class="w-100 border-top shadow">
-                <summary class="w-80" style="font-size: 190%">1.PReBLoを使う</summary><br>
+                <summary class="w-80" style="font-size: 3vw">1.PReBLoを使う</summary><br>
                 <div class="row w-100 mx-2">
                     <div class="col-md-5 p-0 text-center" style="height: 15rem">
                         <video src="{{asset('img/view1.mp4')}}" class="middleImageInfo1" autoplay playinline muted loop></video>
@@ -59,7 +59,7 @@
                 </div>
             </details>
             <details class="w-100 border-top shadow">
-                <summary class="w-80" style="font-size: 190%">2.旅行の記録を投稿</summary><br>
+                <summary class="w-80" style="font-size: 3vw">2.旅行の記録を投稿</summary><br>
                 <div class="row w-100 mx-2">
                     <div class="col-md-5 p-0 text-center" style="height: 15rem">
                         <video src="{{asset('img/view1.mp4')}}" class="middleImageInfo1" autoplay playinline muted loop></video>
@@ -72,7 +72,7 @@
                 </div>
             </details>
             <details class="w-100 border-top border-bottom shadow">
-                <summary class="w-80" style="font-size: 190%">3.観光地・ホテル・ご飯を探す</summary><br>
+                <summary class="w-80" style="font-size: 3vw">3.観光地・ホテル・ご飯を探す</summary><br>
                 <div class="row w-100 mx-2">
                     <div class="col-md-5 p-0 text-center" style="height: 15rem">
                         <video src="{{asset('img/view1.mp4')}}" class="middleImageInfo1" autoplay playinline muted loop></video>
