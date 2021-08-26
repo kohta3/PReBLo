@@ -46,41 +46,41 @@
         {{--PReBLoに関して--}}
         <div class="w-100 text-light my-3">
             <details class="w-100 border-top shadow">
-                <summary class="w-80" style="font-size: 3vw">1.PReBLoを使う</summary><br>
+                <summary class="w-80 d-flex align-items-center">-1.PReBLoを使う</summary>
                 <div class="row w-100 mx-2">
-                    <div class="col-md-5 p-0 text-center" style="height: 15rem">
-                        <video src="{{asset('img/view1.mp4')}}" class="middleImageInfo1" autoplay playinline muted loop></video>
+                    <div class="col-md-5 p-0 d-flex align-items-center text-center" style="height: 15rem">
+                        <video src="{{asset('img/view1.mp4')}}" class="StartImageInfo1" autoplay playinline muted loop></video>
                     </div>
-                    <div class="col-md-7 w-100 text-center">
-                            <p class="ml-3"  style="font-size: 2.5vw">PReBLoでは、旅行やお出かけした思い出を投稿することができます。</p>
-                            <p class="ml-3"  style="font-size: 2.5vw">まずは登録！上のボタンから登録可能！</p>
-                            <p class="ml-3"  style="font-size: 2.5vw">アカウントをお持ちの場合は、ログインを選択</p>
+                    <div class="col-md-7 w-100 my-auto">
+                            <p class="ml-3">PReBLoでは、旅行やお出かけした思い出を投稿することができます。</p>
+                            <p class="ml-3">まずは登録！上のボタンから登録可能！</p>
+                            <p class="ml-3">アカウントをお持ちの場合は、ログインを選択</p>
                     </div>
                 </div>
             </details>
             <details class="w-100 border-top shadow">
-                <summary class="w-80" style="font-size: 3vw">2.旅行の記録を投稿</summary><br>
+                <summary class="w-80 d-flex align-items-center">-2.旅行の記録を投稿</summary><br>
                 <div class="row w-100 mx-2">
                     <div class="col-md-5 p-0 text-center" style="height: 15rem">
                         <video src="{{asset('img/view1.mp4')}}" class="middleImageInfo1" autoplay playinline muted loop></video>
                     </div>
                     <div class="col-md-7 w-100 text-center">
-                            <p class="ml-3" style="font-size: 1.5vw">PReBLoでは、旅行やお出かけした思い出を投稿することができます。</p>
-                            <p class="ml-3" style="font-size: 1.5vw">まずは登録！上のボタンから登録可能！</p>
-                            <p class="ml-3" style="font-size: 1.5vw">アカウントをお持ちの場合は、ログインを選択</p>
+                            <p class="ml-3">PReBLoでは、旅行やお出かけした思い出を投稿することができます。</p>
+                            <p class="ml-3">まずは登録！上のボタンから登録可能！</p>
+                            <p class="ml-3">アカウントをお持ちの場合は、ログインを選択</p>
                     </div>
                 </div>
             </details>
             <details class="w-100 border-top border-bottom shadow">
-                <summary class="w-80" style="font-size: 3vw">3.観光地・ホテル・ご飯を探す</summary><br>
+                <summary class="w-80 d-flex align-items-center">-3.観光地・ホテル・ご飯を探す</summary>
                 <div class="row w-100 mx-2">
                     <div class="col-md-5 p-0 text-center" style="height: 15rem">
                         <video src="{{asset('img/view1.mp4')}}" class="middleImageInfo1" autoplay playinline muted loop></video>
                     </div>
                     <div class="col-md-7 w-100 text-center">
-                            <p class="ml-3" style="font-size: 1.5vw">PReBLoでは、旅行やお出かけした思い出を投稿することができます。</p>
-                            <p class="ml-3" style="font-size: 1.5vw">まずは登録！上のボタンから登録可能！</p>
-                            <p class="ml-3" style="font-size: 1.5vw">アカウントをお持ちの場合は、ログインを選択</p>
+                            <p class="ml-3">PReBLoでは、旅行やお出かけした思い出を投稿することができます。</p>
+                            <p class="ml-3">まずは登録！上のボタンから登録可能！</p>
+                            <p class="ml-3">アカウントをお持ちの場合は、ログインを選択</p>
                     </div>
                 </div>
             </details>
