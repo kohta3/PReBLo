@@ -62,7 +62,7 @@
                 <summary class="w-80 d-flex align-items-center">-2.旅行の記録を投稿</summary><br>
                 <div class="row w-100 mx-2">
                     <div class="col-md-5 p-0 text-center" style="height: 15rem">
-                        <video src="{{asset('img/view1.mp4')}}" class="middleImageInfo1" autoplay playinline muted loop></video>
+                        <img src="{{asset('img/screen.jpg')}}" class="show-img border">
                     </div>
                     <div class="col-md-7 w-100 text-center">
                             <p class="ml-3">PReBLoでは、旅行やお出かけした思い出を投稿することができます。</p>
@@ -75,7 +75,7 @@
                 <summary class="w-80 d-flex align-items-center">-3.観光地・ホテル・ご飯を探す</summary>
                 <div class="row w-100 mx-2">
                     <div class="col-md-5 p-0 text-center" style="height: 15rem">
-                        <video src="{{asset('img/view1.mp4')}}" class="middleImageInfo1" autoplay playinline muted loop></video>
+                        <video src="{{asset('img/screenviddeo.mp4')}}" class="middleImageInfo1" autoplay playinline muted loop></video>
                     </div>
                     <div class="col-md-7 w-100 text-center">
                             <p class="ml-3">PReBLoでは、旅行やお出かけした思い出を投稿することができます。</p>
@@ -131,6 +131,39 @@
                 <img src="https://hbb.afl.rakuten.co.jp/hgb/20f0ba88.2a3a980d.20f0ba89.53dd5aa7/?me_id=1258569&item_id=10000535&pc=https%3A%2F%2Fthumbnail.image.rakuten.co.jp%2F%400_mall%2Fedyshop%2Fcabinet%2Fproduct%2Fedy-key-panda%2Fedy-key-panda_001d.jpg%3F_ex%3D400x400&s=400x400&t=pict" border="0" style="margin:2px" alt="" title="">
             </a>
         </div>
+
+        <div class="d-none my-5 d-md-block text-center">
+            <span>
+                <a href="https://px.a8.net/svt/ejp?a8mat=3HGOQW+5R6VAQ+4OJS+5ZMCH" rel="nofollow">
+                    <img border="0" width="300" height="250" alt="" src="https://www27.a8.net/svt/bgt?aid=210730568348&wid=001&eno=01&mid=s00000021844001006000&mc=1">
+                </a>
+                    <img border="0" width="1" height="1" src="https://www13.a8.net/0.gif?a8mat=3HGOQW+5R6VAQ+4OJS+5ZMCH" alt="">
+            </span>
+            <span class="ml-3">
+                <a href="https://px.a8.net/svt/ejp?a8mat=3HIU7U+6TW1MA+4SJ4+614CX" rel="nofollow">
+                    <img border="0" width="300" height="250" alt="" src="https://www26.a8.net/svt/bgt?aid=210830970413&wid=001&eno=01&mid=s00000022360001013000&mc=1">
+                </a>
+                    <img border="0" width="1" height="1" src="https://www10.a8.net/0.gif?a8mat=3HIU7U+6TW1MA+4SJ4+614CX" alt="">
+            </span>
+            <span class="ml-3">
+                <a href="https://px.a8.net/svt/ejp?a8mat=3HIU7U+71MOHE+4EI4+5ZMCH" rel="nofollow">
+                <img border="0" width="300" height="250" alt="" src="https://www27.a8.net/svt/bgt?aid=210830970426&wid=001&eno=01&mid=s00000020542001006000&mc=1">
+                </a>
+                <img border="0" width="1" height="1" src="https://www18.a8.net/0.gif?a8mat=3HIU7U+71MOHE+4EI4+5ZMCH" alt="">
+            </span>
+            <span class="ml-3">
+                <a href="https://px.a8.net/svt/ejp?a8mat=3HIU7U+7NNPV6+3ZO8+601S1" rel="nofollow">
+                <img border="0" width="300" height="250" alt="" src="https://www24.a8.net/svt/bgt?aid=210830970463&wid=001&eno=01&mid=s00000018620001008000&mc=1">
+                </a>
+                <img border="0" width="1" height="1" src="https://www16.a8.net/0.gif?a8mat=3HIU7U+7NNPV6+3ZO8+601S1" alt="">
+            </span>
+            <span class="ml-3">
+                <a href="https://hb.afl.rakuten.co.jp/hsc/20bca630.fcc5488e.20bca631.12bbb9d1/?link_type=pict&ut=eyJwYWdlIjoic2hvcCIsInR5cGUiOiJwaWN0IiwiY29sIjoxLCJjYXQiOiIxMjAiLCJiYW4iOiIxNDIxNzk5IiwiYW1wIjpmYWxzZX0%3D" target="_blank" rel="nofollow sponsored noopener" style="word-wrap:break-word;"  >
+                    <img src="https://hbb.afl.rakuten.co.jp/hsb/20bca630.fcc5488e.20bca631.12bbb9d1/?me_id=2100001&me_adv_id=1421799&t=pict" border="0" style="margin:2px" alt="" title="">
+                </a>
+            </span>
+        </div>
+        
         @endguest
     @endsection
 </body>
