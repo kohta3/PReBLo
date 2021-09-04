@@ -15,7 +15,7 @@ class AddInfoTable extends Migration
     public function up()
     {
         Schema::table('information', function (Blueprint $table) {
-            $table->string('user_name');  //カラム追加
+            $table->string('user_name')->nullable();
         });
     }
 
