@@ -38,13 +38,13 @@
                 </li>
 
                 <li class="nav-item mx-3 w-100 h-100 d-flex align-items-center ">
-                    <a href="/informations" class="w-100 text-center" >
+                    <a href="/account" class="w-100 text-center" >
                         お気に入り
                     </a>
                 </li>
 
                 <li class="nav-item mx-3 w-100 h-100 d-flex align-items-center ">
-                    <a href="/informations" class="w-100 text-center" >
+                    <a href="/account" class="w-100 text-center" >
                         アカウント
                     </a>
                 </li>

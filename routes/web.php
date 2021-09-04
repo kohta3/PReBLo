@@ -21,7 +21,7 @@ Auth::routes(['verify' => true]);
 
 Route::get('/home', 'HomeController@index')->middleware('auth')->name('home');
 Route::resource('Search', 'SearchController',['only' => ['index','store','show']])->middleware('auth');
-
+Route::resource('account', 'AccountController')->middleware('auth');
 
 
 

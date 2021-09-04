@@ -60,6 +60,8 @@ class InformationController extends Controller
         $information->ParkingCar=$request->input('ParkingCar');
         $information->ParkingBicycles=$request->input("ParkingBicycles");
         $information->category_id = $request->input('category_id');
+        $user_name_controller = Auth::user();
+        $information->user_name = $user_name_controller->name;
         
         if ($request->file('image') !== null) {
             $image = $request->file('image');
@@ -131,7 +133,7 @@ class InformationController extends Controller
      */
     public function edit(Information $information)
     {
-        return view('infomations.edit',compact('information'));
+        return view('informations.edit',compact('information'));
     }
 
     /**
