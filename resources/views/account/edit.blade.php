@@ -14,18 +14,19 @@
 <body>
     @extends('layouts.app')
     @section('content')
-    <div class="text-light">
-        <span class="ml-3 h3 w-100">こんにちは！{{$user->name}}さん</span>
-        <div class="container border w-60 mx-auto">
-            <div class="row d-flex align-items-center  h-25">
-                <a href="{{route('account.edit')}}" class="text-light" style="font-size: 3vw;">
-                    <img src="/img/editname.png" alt="people" class="show-hotel-img m-3">
-                アカウントを編集
-                </a>
-            </div>
-        </div>
-
-        
+    <div class="row ml-3 h2 text-light">
+        アカウント情報の編集
+    </div>
+    <div class="text-light row m-auto w-100" style="height: 80vh">
+        <form action="/account" method="POST" class="mx-auto d-flex align-items-center h-100">
+            @csrf 
+            <input type="hidden" name="_method" value="PUT">
+            <label for="name" class="h3">変更後の名前<input type="text" name="name" class=" mx-3" value="{{$user->name}}"></label>
+            <button class="btn bg-info shadow rounded-pill" type="submit">更新</button>
+        </form>
+    </div>
+    <div class=" d-flex align-items-end">
+        <a href="/account" class="h2 ml-4">戻る</a>
     </div>
     @endsection
 </body>

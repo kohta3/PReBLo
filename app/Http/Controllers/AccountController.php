@@ -3,10 +3,9 @@
 namespace App\Http\Controllers;
 
 use App\Account;
-use App\Information;
 use App\User;
-use Illuminate\Support\Facades\Auth;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class AccountController extends Controller
 {
@@ -17,8 +16,8 @@ class AccountController extends Controller
      */
     public function index()
     {
-        $AuthUser=Auth::user();
-        return view('account.index',compact("AuthUser"));
+        $user = Auth::user();
+        return view('account.index',compact('user'));
     }
 
     /**
@@ -59,9 +58,10 @@ class AccountController extends Controller
      * @param  \App\Account  $account
      * @return \Illuminate\Http\Response
      */
-    public function edit(Account $account)
+    public function edit(Account $account , User $user)
     {
-        //
+        $user = Auth::user();
+        return view('account.edit',compact('user'));
     }
 
     /**
@@ -73,7 +73,11 @@ class AccountController extends Controller
      */
     public function update(Request $request, Account $account)
     {
-        //
+        $user = Auth::user();
+        $user->name = $request->input('name') ? $request->input('name') : $user->name;
+        $user->update();
+        return redirect()->route('account');
+
     }
 
     /**

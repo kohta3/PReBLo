@@ -21,8 +21,11 @@ Auth::routes(['verify' => true]);
 
 Route::get('/home', 'HomeController@index')->middleware('auth')->name('home');
 Route::resource('Search', 'SearchController',['only' => ['index','store','show']])->middleware('auth');
-Route::resource('account', 'AccountController')->middleware('auth');
 
+// ----------------------------------------AccountService----------------------------------------
+Route::get('account', 'AccountController@index')->name('account');
+Route::get('account/edit', 'AccountController@edit')->name('account.edit');
+Route::put('account', 'AccountController@update')->name('account.update');
 
 
 //heroku upload
