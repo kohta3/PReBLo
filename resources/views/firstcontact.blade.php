@@ -25,10 +25,10 @@
                     <div class="carousel-item active">
                         <img class="d-block w-85 img-fluid" src="{{asset('img/carucell01.jpg')}}" alt="d-block img-fluid">
                         {{-- <div class="mr-5 text-center"> --}}
-                        <div class="firstContact_button w-25">
-                            <a href="{{ route('register') }}"><button class="btn btn-success col btn-lg btn-block shadow mb-4 text-white">新規登録</button></a>
-                            <a href="{{ route('login') }}"><button class="btn btn-info col btn-lg btn-block shadow text-white">ログイン</button></a>
-                        </div>
+                            <div class="firstContact_button font-weight-bold w-25 text-white">
+                                <a href="{{ route('register') }}"><button class="btn btn-success col btn-lg btn-block mb-4 text-nowrap">新規登録</button></a>
+                                <a href="{{ route('login') }}"><button class="btn btn-info col btn-lg btn-block text-nowrap">ログイン</button></a>
+                            </div>
                     </div>
 
                     <div class="carousel-item">
