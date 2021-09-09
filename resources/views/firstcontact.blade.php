@@ -15,33 +15,37 @@
     @extends('layouts.app')
 
     @section('content')
-    @guest
         <div class="carousel slide carousel-fade" data-pause=false data-interval=3000  data-ride="carousel" style="width:100%">
-            <ol class="carousel-indicators">
-                <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
-                <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
-            </ol>
-            <div class="carousel-inner">
-                <div class="carousel-item active">
-                    <img class="d-block w-85 img-fluid" src="{{asset('img/carucell01.jpg')}}" alt="d-block img-fluid">
-                    <div class="card-img-overlay mt-0 pl-0">
+            <div style="position: relative">
+                <ol class="carousel-indicators">
+                    <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+                    <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+                </ol>
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <img class="d-block w-85 img-fluid" src="{{asset('img/carucell01.jpg')}}" alt="d-block img-fluid">
+                        {{-- <div class="mr-5 text-center"> --}}
+                        <div class="firstContact_button w-25">
+                            <a href="{{ route('register') }}"><button class="btn btn-success col btn-lg btn-block shadow mb-4 text-white">新規登録</button></a>
+                            <a href="{{ route('login') }}"><button class="btn btn-info col btn-lg btn-block shadow text-white">ログイン</button></a>
+                        </div>
                     </div>
-                </div>
 
-                <div class="carousel-item">
-                    <img class="d-block w-85 img-fluid" src="{{asset('img/carucell02.jpg')}}" alt="d-block img-fluid">
-                    <div class="card-img-overlay" style="font-size:4vw; font-family: 'Kosugi Maru', cursive;">
+                    <div class="carousel-item">
+                        <img class="d-block w-85 img-fluid" src="{{asset('img/carucell02.jpg')}}" alt="d-block img-fluid">
+                        {{-- <div class="mr-5 text-center"> --}}
+                        <div class="firstContact_button w-25 font-weight-bold">
+                            <a href="{{ route('register') }}"><button class="btn btn-success col btn-lg btn-block shadow mb-4 text-white">新規登録</button></a>
+                            <a href="{{ route('login') }}"><button class="btn btn-info col btn-lg btn-block shadow text-white">ログイン</button></a>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
 
-
-        {{-- <div class="mr-5 text-center"> --}}
-        <div class="text-center" style="margin: 0 auto">
-            <a href="{{ route('register') }}"><button class="btn btn-success col btn-lg btn-block shadow text-white">新規登録</button></a>
-            <a href="{{ route('login') }}"><button class="btn btn-info col btn-lg btn-block shadow text-white">ログイン</button></a>
-        </div>
+        
+        {{-- follow SNS --}}
+        
 
         {{--PReBLoに関して--}}
         <div class="w-100 text-light my-3">
@@ -164,7 +168,6 @@
             </span>
         </div>
         
-        @endguest
     @endsection
 </body>
 </html>

@@ -57,6 +57,12 @@
   visibility: collapse;
 }
 
+.firstContact_button{
+  position: absolute;
+  top:45%;
+  right: 0;
+}
+
 .firstcontact-showinfo:hover{
   width: 100%;
   visibility: visible;
@@ -290,6 +296,10 @@ form div{
   background-image: url("image/taxtback.png");
   background-size: 100% 100%;
 }
+
+
+/* follow sns */
+
 
   /* Search_info */
 .search-circle{
