@@ -300,6 +300,10 @@ form div{
 
 
 /* follow sns */
+.sns_info{
+  color: #ffffff;
+}
+
 .insta_info{
   height: 70%; 
   object-fit: contain;
