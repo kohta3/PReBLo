@@ -43,11 +43,11 @@
 
         
         {{-- follow SNS --}}
-        <div class="row w-80 text-center m-2 shadow" style="height: 15%">
+        <div class="row w-80 text-center m-2 shadow" style="height: 10%">
             <div class="w-25 m-auto">
                 <a href="https://www.instagram.com/preblo_poko?ref=badge">
                     <img src="{{asset('img/icon_062470_128.png')}}" alt="instagram" class="insta_info">
-                    <br><span style="font-size: 1vw">twtter follow</span>
+                    <br><span style="font-size: 1vw">instagram follow</span>
                 </a>
             </div>
             <div class="w-25 m-auto">
@@ -59,7 +59,7 @@
             <div class="w-25 m-auto">
                 <a href="https://twitter.com/intent/follow?screen_name=Preblo1" target="_blank">
                     <img src="{{asset('img/f_logo_RGB-White_1024.png')}}" alt="facebook" class="insta_info bg-primary">
-                    <br><span style="font-size: 1vw">twtter follow</span>
+                    <br><span style="font-size: 1vw">facebook follow</span>
                 </a>
             </div>
         </div>

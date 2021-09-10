@@ -301,13 +301,11 @@ form div{
 
 /* follow sns */
 .insta_info{
-  width: 25%; 
-  max-height: 50%;
+  height: 70%; 
   object-fit: contain;
 }
 
 .insta_info:hover{
-  width: 30%; 
   transition: 2s;
   transform:rotate(360deg); 
   object-fit:contain
