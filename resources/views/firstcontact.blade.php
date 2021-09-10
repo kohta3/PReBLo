@@ -1,5 +1,3 @@
-<!DOCTYPE html>
-<html lang="ja">
 <head prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb# website: http://ogp.me/ns/website#">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">    
@@ -45,7 +43,26 @@
 
         
         {{-- follow SNS --}}
-        
+        <div class="row w-80 text-center m-2 shadow" style="height: 15%">
+            <div class="w-25 m-auto">
+                <a href="https://www.instagram.com/preblo_poko?ref=badge">
+                    <img src="{{asset('img/icon_062470_128.png')}}" alt="instagram" class="insta_info">
+                    <br><span style="font-size: 1vw">twtter follow</span>
+                </a>
+            </div>
+            <div class="w-25 m-auto">
+                <a href="https://twitter.com/intent/follow?screen_name=Preblo1" target="_blank">
+                    <img src="{{asset('img/icon_017880_128.png')}}" alt="twetter" class="insta_info">
+                    <br><span style="font-size: 1vw">twtter follow</span>
+                </a>
+            </div>
+            <div class="w-25 m-auto">
+                <a href="https://twitter.com/intent/follow?screen_name=Preblo1" target="_blank">
+                    <img src="{{asset('img/f_logo_RGB-White_1024.png')}}" alt="facebook" class="insta_info bg-primary">
+                    <br><span style="font-size: 1vw">twtter follow</span>
+                </a>
+            </div>
+        </div>
 
         {{--PReBLoに関して--}}
         <div class="w-100 text-light my-3">
@@ -137,31 +154,31 @@
         </div>
 
         <div class="d-none my-5 d-md-block text-center">
-            <span>
+            <span class="ml-auto">
                 <a href="https://px.a8.net/svt/ejp?a8mat=3HGOQW+5R6VAQ+4OJS+5ZMCH" rel="nofollow">
                     <img border="0" width="300" height="250" alt="" src="https://www27.a8.net/svt/bgt?aid=210730568348&wid=001&eno=01&mid=s00000021844001006000&mc=1">
                 </a>
                     <img border="0" width="1" height="1" src="https://www13.a8.net/0.gif?a8mat=3HGOQW+5R6VAQ+4OJS+5ZMCH" alt="">
             </span>
-            <span class="ml-3">
+            <span class="ml-auto">
                 <a href="https://px.a8.net/svt/ejp?a8mat=3HIU7U+6TW1MA+4SJ4+614CX" rel="nofollow">
                     <img border="0" width="300" height="250" alt="" src="https://www26.a8.net/svt/bgt?aid=210830970413&wid=001&eno=01&mid=s00000022360001013000&mc=1">
                 </a>
                     <img border="0" width="1" height="1" src="https://www10.a8.net/0.gif?a8mat=3HIU7U+6TW1MA+4SJ4+614CX" alt="">
             </span>
-            <span class="ml-3">
+            <span class="ml-auto">
                 <a href="https://px.a8.net/svt/ejp?a8mat=3HIU7U+71MOHE+4EI4+5ZMCH" rel="nofollow">
                 <img border="0" width="300" height="250" alt="" src="https://www27.a8.net/svt/bgt?aid=210830970426&wid=001&eno=01&mid=s00000020542001006000&mc=1">
                 </a>
                 <img border="0" width="1" height="1" src="https://www18.a8.net/0.gif?a8mat=3HIU7U+71MOHE+4EI4+5ZMCH" alt="">
             </span>
-            <span class="ml-3">
+            <span class="ml-auto">
                 <a href="https://px.a8.net/svt/ejp?a8mat=3HIU7U+7NNPV6+3ZO8+601S1" rel="nofollow">
                 <img border="0" width="300" height="250" alt="" src="https://www24.a8.net/svt/bgt?aid=210830970463&wid=001&eno=01&mid=s00000018620001008000&mc=1">
                 </a>
                 <img border="0" width="1" height="1" src="https://www16.a8.net/0.gif?a8mat=3HIU7U+7NNPV6+3ZO8+601S1" alt="">
             </span>
-            <span class="ml-3">
+            <span class="ml-auto">
                 <a href="https://hb.afl.rakuten.co.jp/hsc/20bca630.fcc5488e.20bca631.12bbb9d1/?link_type=pict&ut=eyJwYWdlIjoic2hvcCIsInR5cGUiOiJwaWN0IiwiY29sIjoxLCJjYXQiOiIxMjAiLCJiYW4iOiIxNDIxNzk5IiwiYW1wIjpmYWxzZX0%3D" target="_blank" rel="nofollow sponsored noopener" style="word-wrap:break-word;"  >
                     <img src="https://hbb.afl.rakuten.co.jp/hsb/20bca630.fcc5488e.20bca631.12bbb9d1/?me_id=2100001&me_adv_id=1421799&t=pict" border="0" style="margin:2px" alt="" title="">
                 </a>
@@ -170,4 +187,3 @@
         
     @endsection
 </body>
-</html>

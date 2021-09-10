@@ -10,18 +10,17 @@
     
     <div class="collapse navbar-collapse m-0 " style="height: 4.5vw" id="navbarSupportedContent">
         <!-- Right Side Of Navbar -->
-        <ul class="navbar-nav m-0 w-100 h-100  align-middle">
+        <ul class="navbar-nav m-0 w-100 h-100 align-middle">
             <!-- Authentication Links -->
             @guest
-            <ul class="navbar-nav m-0 w-100 h5">
-                <li class="nav-item mr-5">
-                    <a class="nav-link" href="{{ route('register') }}"><button class="btn btn-info  shadow text-white">新規登録</button></a>
+            <ul class="navbar-nav w-100 h5">
+                <li class="navbar-nav ml-auto mr-5 my-auto">
+                    <a class="nav-link" href="{{ route('register') }}"><button class="btn btn-info shadow text-white">新規登録</button></a>
                 </li>
-                <li class="nav-item mr-5">
-                    <a class="nav-link" href="{{ route('login') }}"><button class="btn btn-info  shadow text-white">ログイン</button></a>
+                <li class="nav-item my-auto">
+                    <a class="nav-link" href="{{ route('login') }}"><button class="btn btn-info shadow text-white">ログイン</button></a>
                 </li>
             </ul>
-            <hr>
             @else
 
             <ul class="navbar-nav m-0 w-100 h5">
