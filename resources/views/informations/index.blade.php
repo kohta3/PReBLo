@@ -46,12 +46,12 @@
           {{-- URL --}}
           <div>
             <label class="ml-3 bg-info rounded-pill" for="URL">URL</label>
-            <input type="url" name="URL" id="URL" style="width: 300px" required>
+            <input type="url" name="URL" id="URL" style="width: 300px">
           </div>
           {{-- TEL --}}
           <div>
             <label class="ml-3 bg-info rounded-pill" for="TEL">TEL</label>
-            <input type="tel" placeholder="090-1234-5678" name="TEL" id="TEL" style="width: 300px" required>
+            <input type="number" placeholder="090-1234-5678" name="TEL" id="TEL" style="width: 300px">
           </div>
           {{-- parkingCar --}}
           <div>
@@ -69,10 +69,10 @@
           <div class='p-1 align-top'>
             <label class='bg-info rounded-pill'>営業時間</label>
             <label for="open">open</label>
-            <input type="time" name="open" id="open" style="width: 75px" required>
+            <input type="time" name="open" id="open" style="width: 75px" >
           {{-- closes --}}
             <label for="close">close</label>
-            <input type="time" name="close" id="close" style="width: 75px" required>
+            <input type="time" name="close" id="close" style="width: 75px">
           </div>
 
           {{-- about --}}

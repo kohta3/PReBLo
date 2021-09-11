@@ -43,7 +43,7 @@
 
         
         {{-- follow SNS --}}
-        <div class="row w-80 text-center m-2 shadow" style="height: 12%">
+        <div class="row w-80 text-center m-2 shadow" style="height: 10%">
             <div class="w-25 m-auto">
                 <a href="https://www.instagram.com/preblo_poko?ref=badge">
                     <img src="{{asset('img/icon_062470_128.png')}}" alt="instagram" class="insta_info">

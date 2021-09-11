@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateAccountsTable extends Migration
+class ChangeColmun extends Migration
 {
     /**
      * Run the migrations.
@@ -13,9 +13,11 @@ class CreateAccountsTable extends Migration
      */
     public function up()
     {
-        Schema::create('accounts', function (Blueprint $table) {
-            $table->id();
-            $table->timestamps();
+        Schema::table('information', function (Blueprint $table) {
+            $table->text('URL')->nullable()->change();
+            $table->unsignedBigInteger('TEL')->nullable()->change();
+            $table->time('open')->nullable()->change();
+            $table->time('close')->nullable()->change();
         });
     }
 
@@ -26,6 +28,6 @@ class CreateAccountsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('accounts');
+        //
     }
 }
