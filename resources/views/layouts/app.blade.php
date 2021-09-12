@@ -8,6 +8,11 @@
         <meta name="keywords" content="旅行,宿泊,ホテル,観光,宿,ご飯,レストラン,旅,preblo">
         <meta name="google-site-verification" content="google-site-verification=j3XrJh7g_NicUV8Ut7t0rpfJvq2jTMum3-s79v8qPtc">
 
+        {{-- reaflet --}}
+        <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.0/dist/leaflet.css" />
+        <script src="https://unpkg.com/leaflet@1.3.0/dist/leaflet.js"></script>
+       
+
         <!-- CSRF Token -->
         <meta name="csrf-token" content="{{ csrf_token() }}">
 
@@ -30,7 +35,7 @@
         <link href="{{ asset('css/PReBLo.css') }}" rel="stylesheet">
         
     </head>
-    <body class="BackGroundColor">
+    <body class="BackGroundColor" onload="init()">
 
         <div id="app">            
             @component('components.header')

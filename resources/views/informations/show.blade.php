@@ -10,6 +10,19 @@
     <meta property="og:description" content=" 観光地、宿泊施設、飲食店をみんなに共有しよう！" />
     <meta property="og:site_name" content="観光地・ホテル・ご飯の投稿サイトPReBLo!" />
     <meta property="og:image" content={{asset('img/meta.png')}} />
+
+    <script>
+      function init() {
+        //地図を表示するdiv要素のidを設定
+        var map = L.map('mapcontainer');
+        //地図の中心とズームレベルを指定
+        map.setView([35.40, 136], 5);
+        //表示するタイルレイヤのURLとAttributionコントロールの記述を設定して、地図に追加する
+        L.tileLayer('https://cyberjapandata.gsi.go.jp/xyz/std/{z}/{x}/{y}.png', {
+            attribution: "<a href='https://maps.gsi.go.jp/development/ichiran.html' target='_blank'>地理院タイル</a>"
+        }).addTo(map);
+      }
+    </script>
 </head>
 
 
@@ -36,7 +49,7 @@
       </div>
 
       <div class="col-md-6 show-position show-infor h-100">
-        <div class="h-50 border">
+        <div class="h-50">
           <div class="m-3">
             <?php
               if($information->ParkingCar!=0)$judgeCar='駐車場有り';
@@ -46,9 +59,10 @@
             ?>
             <p class="h2">{{$information->tittle}}</p>
             <p>{{$information->pref . $information->city}}</p>
+            <p><span class="text-info">投稿:</span>{{ Auth::user()->name }}さん</p>
             <p><a href='{{$information->URL}}'>ウェブサイトにアクセス</a></p>
-            <p>{{$information->TEL}}</p>
-            <p>{{$information->about}}</p>
+            <p><span class="text-info">TEL:</span>{{$information->TEL}}</p>
+            <p><span class="text-info">about:</span>{{$information->about}}</p>
             <p>{{$information->OfficeHour}}</p>
             <p>{{$judgeCar."\t".$judgeBycycle}}</p>
             {{-- good or ungood --}}
@@ -67,11 +81,16 @@
 
           </div>
         </div>
+
+
         <div class="h-50 text-light">
-          <p>map</p>
+          <body onload="init()">
+            <div id="mapcontainer" style="width:600px;height:90%"></div>
+          </body>
         </div>
+
       </div>
-    </div>
+      
     <div class="w-100 mt-5 mb-2 text-light"><h2 class="bg-dark shadow m-3">付近の宿泊施設↓</h2></div>
     <div class="row mx-3">
       @foreach ($hotelInfo as $hotel)
