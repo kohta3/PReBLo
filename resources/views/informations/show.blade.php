@@ -83,14 +83,12 @@
         </div>
 
 
-        <div class="h-50 text-light">
-          <body onload="init()">
-            <div id="mapcontainer" style="width:600px;height:90%"></div>
-          </body>
+        <div class="h-50 w-100 text-light">
+            <div id="mapcontainer" style="width:100%;height:90%"></div>
         </div>
 
       </div>
-      
+    </div> 
     <div class="w-100 mt-5 mb-2 text-light"><h2 class="bg-dark shadow m-3">付近の宿泊施設↓</h2></div>
     <div class="row mx-3">
       @foreach ($hotelInfo as $hotel)
