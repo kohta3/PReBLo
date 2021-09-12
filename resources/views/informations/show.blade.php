@@ -59,7 +59,7 @@
             ?>
             <p class="h2">{{$information->tittle}}</p>
             <p>{{$information->pref . $information->city}}</p>
-            <p><span class="text-info">投稿:</span>{{ Auth::user()->name }}さん</p>
+            <p><span class="text-info">投稿:</span>{{$information->user_name}}さん</p>
             <p><a href='{{$information->URL}}'>ウェブサイトにアクセス</a></p>
             <p><span class="text-info">TEL:</span>{{$information->TEL}}</p>
             <p><span class="text-info">about:</span>{{$information->about}}</p>
