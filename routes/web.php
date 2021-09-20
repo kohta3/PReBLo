@@ -16,11 +16,11 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', 'firsrContactController@index')->middleware('guest');
 
-Route::resource('informations', 'InformationController')->middleware('auth');
+Route::resource('informations', 'InformationController');
 Auth::routes(['verify' => true]);
 
 Route::get('/home', 'HomeController@index')->middleware('auth')->name('home');
-Route::resource('Search', 'SearchController',['only' => ['index','store','show']])->middleware('auth');
+Route::resource('Search', 'SearchController',['only' => ['index','store','show']]);
 
 // ----------------------------------------AccountService----------------------------------------
 Route::get('account', 'AccountController@index')->name('account');
@@ -35,3 +35,6 @@ if (env('APP_ENV') === 'production') {
 
 Route::get('/informations/like/{id}', 'InformationController@like')->middleware('auth')->name('infolike');
 Route::get('/informations/unlike/{id}', 'InformationController@unlike')->middleware('auth')->name('infounlike');
+
+//siteMap
+Route::get('/sitemap', [App\Http\Controllers\SitemapController::class, 'index'])->name('sitemap');
