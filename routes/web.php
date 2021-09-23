@@ -2,7 +2,6 @@
 
 use GuzzleHttp\Middleware;
 use Illuminate\Support\Facades\Route;
-use Illuminate\Foundation\Auth;
 
 /*
 |--------------------------------------------------------------------------
