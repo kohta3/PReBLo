@@ -16,7 +16,7 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', 'firsrContactController@index')->middleware('guest');
 
-Route::resource('informations', 'InformationController')->middleware('verified');;
+Route::resource('informations', 'InformationController');   //->middleware('verified')
 Auth::routes(['verify' => true]);
 
 Route::get('/home', 'HomeController@index')->middleware('auth')->name('home');
