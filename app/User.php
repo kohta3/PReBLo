@@ -10,7 +10,7 @@ use App\Notifications\CustomResetPassword;
 
 class User extends Authenticatable implements MustVerifyEmail
 {
-    use Notifiable;
+    use MustVerifyEmail, Notifiable;
 
     public function sendEmailVerificationNotification()
     {
