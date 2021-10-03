@@ -2,6 +2,7 @@
 
 use GuzzleHttp\Middleware;
 use Illuminate\Support\Facades\Route;
+use Illuminate\Foundation\Auth\EmailVerificationRequest;
 
 /*
 |--------------------------------------------------------------------------
@@ -16,7 +17,7 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', 'firsrContactController@index')->middleware('guest');
 
-Route::resource('informations', 'InformationController');
+Route::resource('informations', 'InformationController')->middleware('verified');
 Auth::routes(['verify' => true]);
 
 Route::get('/home', 'HomeController@index')->middleware('auth')->name('home');
@@ -26,6 +27,8 @@ Route::resource('Search', 'SearchController',['only' => ['index','store','show']
 Route::get('account', 'AccountController@index')->name('account');
 Route::get('account/edit', 'AccountController@edit')->name('account.edit');
 Route::put('account', 'AccountController@update')->name('account.update');
+
+
 
 
 //heroku upload
