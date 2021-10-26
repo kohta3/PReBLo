@@ -14,7 +14,7 @@
 <body>
     @extends('layouts.app')
     @section('content')
-    <div class="text-light h-100">
+    <div class="text-light h-100" style="min-height: 100vh;">
         <span class="ml-3 h3 w-100">こんにちは！{{$user->name}}さん</span>
         <div class="container w-75 mx-auto my-5" style="font-size: 2.5vw;">
             <div class="row d-flex align-items-center border h-25">
