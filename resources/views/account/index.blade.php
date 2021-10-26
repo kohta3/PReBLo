@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="ja">
+<html lang="ja" class="h-100">
 <head prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb# website: http://ogp.me/ns/website#">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">    
@@ -14,15 +14,23 @@
 <body>
     @extends('layouts.app')
     @section('content')
-    <div class="text-light">
+    <div class="text-light h-100">
         <span class="ml-3 h3 w-100">こんにちは！{{$user->name}}さん</span>
-        <div class="container border w-60 mx-auto">
-            <div class="row d-flex align-items-center  h-25">
-                <a href="{{route('account.edit')}}" class="text-light" style="font-size: 3vw;">
-                    <img src="/img/editname.png" alt="people" class="show-hotel-img m-3">
-                アカウントを編集
+        <div class="container w-75 mx-auto my-5" style="font-size: 2.5vw;">
+            <div class="row d-flex align-items-center border h-25">
+                <a href="{{route('account.edit')}}" class="text-light" >
+                    <img src="/img/editname.png" alt="people" class="show-accountmenu-img m-3 w-25">
+                    <span class="w-75">アカウントを編集</span>
                 </a>
             </div>
+
+            <div class="row d-flex align-items-center border h-25">
+                <a href="{{url('EditInformation')}}" class="text-light">
+                    <img src="/img/Reshume.png" alt="people" class="show-accountmenu-img m-3 w-25">
+                    <span class="w-25">投稿の修正と削除</span>
+                </a>
+            </div>
+
         </div>
 
         

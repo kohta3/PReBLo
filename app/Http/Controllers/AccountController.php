@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Account;
+use App\Information;
 use App\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
@@ -17,7 +18,8 @@ class AccountController extends Controller
     public function index()
     {
         $user = Auth::user();
-        return view('account.index',compact('user'));
+        $info=Information::all();
+        return view('account.index',compact('user','info'));
     }
 
     /**

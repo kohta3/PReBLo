@@ -75,7 +75,7 @@ class InformationController extends Controller
 
         $information->save();
 
-        return redirect()->route('informations.show', ['information' => $information->id])->with('flash_message', '投稿が完了しました');;
+        return redirect()->route('informations.show', ['information' => $information->id])->with('flash_message', '投稿が完了しました');
     }
 
     /**
@@ -145,7 +145,13 @@ class InformationController extends Controller
      */
     public function update(Request $request, Information $information)
     {
-        //
+        $information->comment=$request->input('comment');
+        $information->URL=$request->input('URL');
+        $information->about=$request->input('about');
+        $information->TEL=$request->input('number');
+        $information->update();
+
+        return redirect()->route('informations.show', ['information' => $information->id])->with('flash_message', '修正が完了しました');
     }
 
     /**

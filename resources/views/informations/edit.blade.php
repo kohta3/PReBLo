@@ -2,19 +2,22 @@
 @section('content')
 
 
-<h1>内容の変更</h1>
+<h1 class="text-light">内容の変更</h1>
 
-<form method="POST" action="/infomations/{{ $information->id }}">
-    {{ csrf_field() }}
-    <input type="hidden" name="_method" value="PUT">
-    <input type="string" name="comment" value="{{ $information->comment }}">
-    <input type="url" name="URL" value="{{$information->URL}}">
-    <textarea name="about">{{ $information->about }}</textarea>
-    <input type="number" name="price"  value="{{ $information->price }}">
-    <button type="submit">Update</button>
-</form>
+<div class="ml-5">
+    <form method="POST" action="/informations/{{ $information->id }}">
+        {{ csrf_field() }}
+        <input type="hidden" name="_method" value="PUT">
+        <p><input type="string" name="comment" value="{{ $information->comment }}"></p>
+        <p><input type="url" name="URL" value="{{$information->URL}}"></p>
+        <p><textarea name="about">{{ $information->about }}</textarea></p>
+        <input type="number" name="TEL"  value="{{ $information->TEL }}">
 
-<a href="/products">Back</a>
+        <button type="submit">Update</button>
+    </form>
+</div>
+
+<a href="/infomations" class="ml-3">Back</a>
 
 
 

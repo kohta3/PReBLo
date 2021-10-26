@@ -15,9 +15,9 @@
     <body>
     @extends('layouts.app')
     @section('content')
+    <h3 class="row m-2 text-light">{{$sort_pref->Pref."の検索結果"}}</h3>
         @foreach ($search_view as $info)
         <div class="text-light">
-            <h3 class="row m-2">{{$sort_pref->Pref."の検索結果"}}</h3>
             <div class="row search-circle searchshow-parent mx-5 my-3" style="height: 15rem">
                 <div class="col-md-5 h-100 p-0">
                     <a href="{{route('informations.show', $info)}}" class="align-items-center">    

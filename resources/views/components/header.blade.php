@@ -37,7 +37,7 @@
                 </li>
 
                 <li class="nav-item mx-3 w-100 h-100 d-flex align-items-center ">
-                    <a href="/account" class="w-100 text-center" >
+                    <a href="/favorite" class="w-100 text-center" >
                         お気に入り
                     </a>
                 </li>

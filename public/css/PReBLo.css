@@ -293,6 +293,12 @@ form div{
   margin: 0 3px;
 }
 
+.show-accountmenu-img{
+  width: 20%;
+  height: auto;
+  object-fit: contain;
+}
+
 .backimage{
   background-image: url("image/taxtback.png");
   background-size: 100% 100%;

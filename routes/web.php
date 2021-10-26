@@ -27,9 +27,8 @@ Route::resource('Search', 'SearchController',['only' => ['index','store','show']
 Route::get('account', 'AccountController@index')->name('account');
 Route::get('account/edit', 'AccountController@edit')->name('account.edit');
 Route::put('account', 'AccountController@update')->name('account.update');
-
-
-
+Route::get('EditInformation', 'EditInformationController@editinfo')->middleware('verified');
+Route::get('favorite', 'FavoriteController@Favo')->middleware('verified');
 
 //heroku upload
 if (env('APP_ENV') === 'production') {
