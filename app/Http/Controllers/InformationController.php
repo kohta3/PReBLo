@@ -11,6 +11,7 @@ use Illuminate\Support\Facades\Auth;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Storage;
 use GuzzleHttp\Client;
+use App\City;
 
 class InformationController extends Controller
 {
@@ -25,8 +26,9 @@ class InformationController extends Controller
         $topinfo=Information::all()->sortBy('id')->take(3);
         $prefs=Prefecture::all();
         $categories=Category::all();
+        $cities=City::all();
 
-        return view('informations.index',compact('info','prefs','categories','topinfo'));
+        return view('informations.index',compact('info','prefs','categories','topinfo','cities'));
     }
 
     /**

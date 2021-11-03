@@ -5,76 +5,86 @@
 <p class="pt-3 pr-5 pl-5 ">
   <a class="btn btn-primary btn-sm" data-toggle="collapse" href="#multiCollapseExample1" role="button" aria-expanded="false" aria-controls="multiCollapseExample1"><img src="/img/menu.png" alt="create" class="resizeimage-img" >新しく投稿する</a>
 </p>
-<div class="row resizeadd-info pl-3 add-info-index w-100">
-  <div class="collapse multi-collapse" id="multiCollapseExample1">
+<div class="row resizeadd-info mx-auto">
+  <div class="collapse multi-collapse w-100" id="multiCollapseExample1">
     <div class="card card-body h5">
       <form class="info-form" method="POST" action="/informations" enctype="multipart/form-data">  
-        {{ csrf_field() }}
-          {{-- choese CatrgoryType --}}
-          <label class=" bg-info rounded-pill" for="type">カテゴリータイプ</label>
-          <select name="category_id" id="type">
-            @foreach ($categories as $category)
-                <option value="{{ $category->id }}">{{ $category->maintype.$category->category }}</option>
+      {{ csrf_field() }}
+
+      {{-- choese CatrgoryType --}}
+      <p>
+        <label class=" bg-info rounded-pill" for="type">カテゴリータイプ</label>
+        <select name="category_id" id="type">
+          @foreach ($categories as $category)
+              <option value="{{ $category->id }}">{{ $category->maintype."-".$category->category }}</option>
+          @endforeach
+        </select>
+      </p>
+
+      {{-- comment --}}
+      <p>
+        <label class=" bg-info rounded-pill" for="comment" maxlength='100'>ひとこと</label>
+        <input type="string" style="width: 70%" name="comment" id="comment" maxlength='50' required>
+      </p>
+
+        {{-- 場所 --}}
+        <div class="row ml-3 mb-3"> 
+          <label for="tittle" class=" bg-info rounded-pill">場所</label>
+          {{-- pref --}}
+          <select name="pref"  class="w-auto col-md-3">
+            <option class="h3" hidden>都道府県を選択してください</option>
+            @foreach ($prefs as $pref)
+              <option value="{{$pref->Pref}}" id="PrrefSelect">{{$pref->Pref}}</option>
             @endforeach
           </select>
-          {{-- comment --}}
-          <div class="mr-1" style="width: 70%">
-            <label class=" bg-info rounded-pill" for="comment" maxlength='100'>ひとこと</label>
-            <input type="string" style="width: 70%" name="comment" id="comment" maxlength='50' required>
-          </div>
-          {{-- tittle --}}
-          <div class="mr-1">
-            <label for="tittle" class=" bg-info rounded-pill">場所名</label><input type="string" style="width: 40%" name="tittle" id="tittle" required>
-          </div>
-          {{-- pref --}}
-            <div> 
-              <label class="bg-info rounded-pill">都道府県</label>
-              <select name="pref"  style="width: 100px">
-                @foreach ($prefs as $pref)
-                  <option value="{{$pref->Pref}}">{{$pref->Pref}}</option>
-                @endforeach
-              </select>
-              &nbsp;
-            </div>
           {{-- city --}}
-            <div>
-              &nbsp;
-              <img src="/img/city.png" class="bikeorcar-img">
-              <label for="city" class="bg-info rounded-pill">市区町村</label>
-              <input type="string" id="city" name="city" class="ml-1" style="width: 100px" required>
-            </div>
-          {{-- URL --}}
-          <div>
-            <label class="ml-3 bg-info rounded-pill" for="URL">URL</label>
-            <input type="url" name="URL" id="URL" style="width: 300px">
-          </div>
-          {{-- TEL --}}
-          <div>
-            <label class="ml-3 bg-info rounded-pill" for="TEL">TEL</label>
-            <input type="number" placeholder="09012345678" name="TEL" id="TEL" style="width: 300px">
-          </div>
-          {{-- parkingCar --}}
-          <div>
-            <img src="/img/carport.png" class="bikeorcar-img">
-            <label for="carport" class='bg-info rounded-pill'>駐車場</label>
-            無<input type="radio" id="carport" name="ParkingCar" value="0">
-            有<input type="radio" id="carport" class="mr-2" name="ParkingCar" value="1">
-            <img src="/img/bike.png" class="bikeorcar-img">
-            <label for="bycyclePort" class='bg-info rounded-pill'>駐輪場</label>
-            無<input type="radio" id="bycyclePort" name="ParkingBicycles" value="0">
-            有<input type="radio" id="bycyclePort" name="ParkingBicycles" value="1">
-          </div>
-          
-          {{-- open --}}
-          <div class='p-1 align-top'>
-            <label class='bg-info rounded-pill'>営業時間</label>
-            <label for="open">open</label>
-            <input type="time" name="open" id="open" style="width: 75px" >
-          {{-- closes --}}
-            <label for="close">close</label>
-            <input type="time" name="close" id="close" style="width: 75px">
-          </div>
+          <select name="city"  class="w-auto col-md-3 ml-1">
+            <option class="h3" hidden>市区町村を選択してください</option>
+            @foreach ($cities as $city)
+              @if ($city->CityPref=$pref->Pref)
+                <option value="{{$city->CityLarge}}">{{$city->CityLarge}}</option>    
+              @endif
+            @endforeach
+          </select>
+          {{-- tittle --}}
+          <input type="string" class="w-75 col-md-5 ml-1" name="tittle" id="tittle" placeholder="場所の名前・・・例:東京タワー" required>
+        </div>
+                          
+        {{-- URL --}}
+      <p>
+        <div>
+          <label class="ml-3 bg-info rounded-pill" for="URL">URL</label>
+          <input type="url" name="URL" id="URL" style="width: 300px">
+        </div>
+        {{-- TEL --}}
+        <div>
+          <label class="ml-3 bg-info rounded-pill" for="TEL">TEL</label>
+          <input type="number" placeholder="09012345678" name="TEL" id="TEL" style="width: 300px">
+        </div>
 
+        {{-- open --}}
+        <div class='align-top my-auto  ml-3'>
+          <label class='bg-info rounded-pill'>営業時間</label>
+          <label for="open">open</label>
+          <input type="time" name="open" id="open" style="width: 75px" >
+        {{-- closes --}}
+          <label for="close">close</label>
+          <input type="time" name="close" id="close" style="width: 75px">
+        </div>
+      </p>
+        {{-- parkingCar --}}
+      <p>
+        <div>
+          <img src="/img/carport.png" class="bikeorcar-img">
+          <label for="carport" class='bg-info rounded-pill'>駐車場</label>
+          無<input type="radio" id="carport" name="ParkingCar" value="0">
+          有<input type="radio" id="carport" class="mr-2" name="ParkingCar" value="1">
+          <img src="/img/bike.png" class="bikeorcar-img">
+          <label for="bycyclePort" class='bg-info rounded-pill'>駐輪場</label>
+          無<input type="radio" id="bycyclePort" name="ParkingBicycles" value="0">
+          有<input type="radio" id="bycyclePort" name="ParkingBicycles" value="1">
+        </div>
+      </p>  
           {{-- about --}}
           <div style="width: 80%">
             <label for="about" class="bg-info rounded-pill align-top">about</label>

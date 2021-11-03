@@ -193,7 +193,7 @@ details summary div p{
   height: auto;
 }
 .resizeadd-info { 
-  width: 90%; 
+  width: 95%; 
   height: auto;
 }
 
@@ -227,10 +227,6 @@ div select{
   text-align: center;
   width: 15%;
   height: 3%;
-}
-
-.add-info-index{
-  width: 100%;
 }
 
 .image-responsive{
