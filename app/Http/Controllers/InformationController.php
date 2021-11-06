@@ -26,7 +26,7 @@ class InformationController extends Controller
         $topinfo=Information::all()->sortBy('id')->take(3);
         $prefs=Prefecture::all();
         $categories=Category::all();
-        $cities=City::all();
+        $cities="City::all()";
 
         return view('informations.index',compact('info','prefs','categories','topinfo','cities'));
     }
