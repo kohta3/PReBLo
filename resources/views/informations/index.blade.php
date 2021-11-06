@@ -31,7 +31,7 @@
         <div class="row ml-3 mb-3"> 
           <label for="tittle" class=" bg-info rounded-pill">場所</label>
           {{-- pref --}}
-          <select name="pref"  class="w-auto col-md-3">
+          <select name="pref"  class="w-auto col-md-3" id="PrefSelection">
             <option class="h3" hidden>都道府県を選択してください</option>
             @foreach ($prefs as $pref)
               <option value="{{$pref->Pref}}" id="PrrefSelect">{{$pref->Pref}}</option>
