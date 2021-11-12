@@ -14,7 +14,7 @@
       {{-- choese CatrgoryType --}}
       <p>
         <label class=" bg-info rounded-pill" for="type">カテゴリータイプ</label>
-        <select name="category_id" id="type">
+        <select name="category_id w-75" id="type">
           @foreach ($categories as $category)
               <option value="{{ $category->id }}">{{ $category->maintype."-".$category->category }}</option>
           @endforeach
