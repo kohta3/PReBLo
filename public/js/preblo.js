@@ -8,11 +8,12 @@ SelectPref.addEventListener('change',(event) => {
     for (let index = 0; index < 1747; index++){
       let city = CityToScript[index];
       let cityOfPref=Object.keys(city)[0];
-      // console.log(cityOfPref);
-      if (cityOfPref===SelPref){
-        var test = '<option value="'+ city[cityOfPref] + '">' + city[cityOfPref] + "</option>";
-        SelectCity.insertAdjacentHTML('beforeend',test);
-      };
+      if(cityOfPref!==null){
+        if (cityOfPref===SelPref){
+          var test = '<option value="'+ city[cityOfPref] + '">' + city[cityOfPref] + "</option>";
+          SelectCity.insertAdjacentHTML('beforeend',test);
+        };
+      }
     };
 });
 
