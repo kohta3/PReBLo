@@ -27,41 +27,41 @@
         <input type="string" style="width: 70%" name="comment" id="comment" maxlength='50' required>
       </p>
 
-        {{-- 場所 --}}
-        <div class="row ml-3 mb-3"> 
-          <label for="tittle" class=" bg-info rounded-pill">場所</label>
+      {{-- 場所 --}}
+      <div class="row ml-3 mb-3 text-nowrap" style="width:100%;"> 
+        <label for="tittle" class="w-auto bg-info rounded-pill">場所</label>
 
-          {{-- pref --}}
-          <select name="pref"  class="w-auto col-md-3" id="PrefSelection">
-            <option class="h3" hidden>都道府県を選択してください</option>
-            @foreach ($prefs as $pref)
-              <option value="{{$pref->Pref}}" id="PrefSelect">{{$pref->Pref}}</option>
-            @endforeach
-          </select>
+        {{-- pref --}}
+        <select name="pref"  class="w-25" id="PrefSelection">
+          <option class="h3" hidden>都道府県を選択してください</option>
+          @foreach ($prefs as $pref)
+            <option value="{{$pref->Pref}}" id="PrefSelect">{{$pref->Pref}}</option>
+          @endforeach
+        </select>
 
-          {{-- city --}}
-          <select name="city" class="w-auto col-md-3 ml-1" id='child'>
-            <option class="h3" hidden>市区町村を選択してください</option>              
-          </select>
-            <?php 
-              $num = 1;
-              foreach ($cities as $city){
-                $CityArray[] = array($city->CityPref=>$city->CityLarge);
-                $num++;
-              }
-              $CitySelection=json_encode($CityArray);
-            ?>
+        {{-- city --}}
+        <select name="city" class="w-25 ml-1" id='child'>
+          <option class="h3" hidden>市区町村を選択してください</option>              
+        </select>
+          <?php 
+            $num = 1;
+            foreach ($cities as $city){
+              $CityArray[] = array($city->CityPref=>$city->CityLarge);
+              $num++;
+            }
+            $CitySelection=json_encode($CityArray);
+          ?>
 
-            <script type="text/javascript">
-              var CityToScript = <?php echo $CitySelection; ?>;
-            </script>
+          <script type="text/javascript">
+            var CityToScript = <?php echo $CitySelection; ?>;
+          </script>
 
-          
         
-            
-          {{-- tittle --}}
-          <input type="string" class="w-75 col-md-5 ml-1" name="tittle" id="tittle" placeholder="場所の名前・・・例:東京タワー" required>
-        </div>
+      
+          
+        {{-- tittle --}}
+        <input type="string" class="w-25 ml-1" name="tittle" id="tittle" placeholder="場所の名前・・・例:東京タワー" required>
+      </div>
                           
         {{-- URL --}}
       <p>
