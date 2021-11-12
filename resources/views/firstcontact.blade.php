@@ -9,7 +9,6 @@
     <meta property="og:image" content={{asset('img/meta.png')}} />
 </head>
 
-<body>
     @extends('layouts.app')
 
     @section('content')
@@ -186,4 +185,3 @@
         </div>
         
     @endsection
-</body>

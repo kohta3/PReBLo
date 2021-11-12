@@ -30,22 +30,35 @@
         {{-- 場所 --}}
         <div class="row ml-3 mb-3"> 
           <label for="tittle" class=" bg-info rounded-pill">場所</label>
+
           {{-- pref --}}
           <select name="pref"  class="w-auto col-md-3" id="PrefSelection">
             <option class="h3" hidden>都道府県を選択してください</option>
             @foreach ($prefs as $pref)
-              <option value="{{$pref->Pref}}" id="PrrefSelect">{{$pref->Pref}}</option>
+              <option value="{{$pref->Pref}}" id="PrefSelect">{{$pref->Pref}}</option>
             @endforeach
           </select>
+
           {{-- city --}}
-          <select name="city"  class="w-auto col-md-3 ml-1">
-            <option class="h3" hidden>市区町村を選択してください</option>
-            @foreach ($cities as $city)
-              @if ($city->CityPref=$pref->Pref)
-                <option value="{{$city->CityLarge}}">{{$city->CityLarge}}</option>    
-              @endif
-            @endforeach
+          <select name="city" class="w-auto col-md-3 ml-1" id='child'>
+            <option class="h3" hidden>市区町村を選択してください</option>              
           </select>
+            <?php 
+              $num = 1;
+              foreach ($cities as $city){
+                $CityArray[] = array($city->CityPref=>$city->CityLarge);
+                $num++;
+              }
+              $CitySelection=json_encode($CityArray);
+            ?>
+
+            <script type="text/javascript">
+              var CityToScript = <?php echo $CitySelection; ?>;
+            </script>
+
+          
+        
+            
           {{-- tittle --}}
           <input type="string" class="w-75 col-md-5 ml-1" name="tittle" id="tittle" placeholder="場所の名前・・・例:東京タワー" required>
         </div>
@@ -207,7 +220,7 @@
       {{-- rakuten afiriate --}}
       <div class="mb-5  mt-5 responsive-afi text-center">
         <a href="https://hb.afl.rakuten.co.jp/hsc/20bca630.fcc5488e.20bca631.12bbb9d1/?link_type=pict&ut=eyJwYWdlIjoic2hvcCIsInR5cGUiOiJwaWN0IiwiY29sIjoxLCJjYXQiOiIxMjAiLCJiYW4iOiIxNDIxNzk5IiwiYW1wIjpmYWxzZX0%3D" target="_blank" rel="nofollow sponsored noopener" class='m-5' style="word-wrap:break-word;">
-          <img src="https://hbb.afl.rakuten.co.jp/hsb/20bca630.fcc5488e.20bca631.12bbb9d1/?me_id=2100001&me_adv_id=1421799&t=pict" border="0" class='image-responsive' style="width:70%" alt="" title=""></a>
+          <img src="https://hbb.afl.rakuten.co.jp/hsb/20bca630.fcc5488e.20bca631.12bbb9d1/?me_id=2100001&me_adv_id=1421799&t=pict" border="0" class='image-responsive img-fluid' style="width:70%" alt="" title=""></a>
       </div>
       {{-- rakuten afi map --}}
       <div class="responsive-afi text-center">  

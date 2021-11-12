@@ -21,6 +21,7 @@
         <!-- Scripts -->
         <script src="{{ asset('js/app.js') }}" defer></script>
         <script src="{{ asset('js/preblo.js') }}" defer></script>
+        <script src="https://js.stripe.com/v3/"></script>
 
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
 
