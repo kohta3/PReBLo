@@ -9,13 +9,10 @@ SelectPref.addEventListener('change',(event) => {
       var city = CityToScript[index];
       let cityOfPref=Object.keys(city)[0];
       console.log[index];
-
-      if(cityOfPref!==null){
         if (cityOfPref===SelPref){
           var test = '<option value="'+ city[cityOfPref] + '">' + city[cityOfPref] + "</option>";
           SelectCity.insertAdjacentHTML('beforeend',test);
         };
-      }
     };
 });
 
