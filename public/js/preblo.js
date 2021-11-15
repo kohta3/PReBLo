@@ -5,11 +5,10 @@ SelectPref.addEventListener('change',(event) => {
     while( SelectCity.firstChild ){
       SelectCity.removeChild( SelectCity.firstChild );
     }
-    for (let index = 0; index < 1747; index++){
-      console.log[index];
+    for (var index = 0; index < 1747; index++){
       var city = CityToScript[index];
-      console.log[city];
       let cityOfPref=Object.keys(city)[0];
+      console.log[index];
 
       if(cityOfPref!==null){
         if (cityOfPref===SelPref){
