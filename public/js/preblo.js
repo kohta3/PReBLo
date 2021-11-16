@@ -5,7 +5,7 @@ SelectPref.addEventListener('change',(event) => {
     while( SelectCity.firstChild ){
       SelectCity.removeChild( SelectCity.firstChild );
     }
-    for (var index = 0; index < 1747; index++){
+    for (let index = 0; index < CityToScript.length; index++){
       var city = CityToScript[index];
       let cityOfPref=Object.keys(city)[0];
       console.log[index];
